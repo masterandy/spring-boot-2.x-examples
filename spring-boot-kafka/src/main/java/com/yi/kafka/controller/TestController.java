@@ -1,6 +1,6 @@
-package com.example.kafka.controller;
+package com.yi.kafka.controller;
 
-import com.example.kafka.message.KafkaProducer;
+import com.yi.kafka.message.KafkaProducer;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

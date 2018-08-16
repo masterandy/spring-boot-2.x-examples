@@ -1,4 +1,4 @@
-package com.example.kafka.config;
+package com.yi.kafka.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.ComponentScan;
@@ -14,7 +14,7 @@ import org.springframework.kafka.annotation.EnableKafka;
 @Slf4j
 @Configuration
 @EnableKafka
-@ComponentScan(value = {"com.example.kafka"})
+@ComponentScan(value = {"com.yi.kafka"})
 public class KafkaConfiguration {
 
 }

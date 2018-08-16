@@ -1,6 +1,6 @@
-package com.example.kafka;
+package com.yi.kafka;
 
-import com.example.kafka.message.KafkaProducer;
+import com.yi.kafka.message.KafkaProducer;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
