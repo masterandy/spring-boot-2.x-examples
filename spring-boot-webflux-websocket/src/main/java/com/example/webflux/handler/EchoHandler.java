@@ -22,15 +22,12 @@ public class EchoHandler implements WebSocketHandler {
     public Mono<Void> handle(final WebSocketSession session) {
         Message message = new Message();
 
-        return session.send(session
-                .receive()
-                .map(
-                    msg -> {
-                        message.setMsg("服务端返回：" + msg.getPayloadAsText());
+        return session.send(session.receive().map(msg -> {
+                    message.setMsg("服务端返回：" + msg.getPayloadAsText());
 
-                        return session.textMessage(JSONUtil.toJsonStr(message));
-                    }
-                )
+                    return session.textMessage(JSONUtil.toJsonStr(message));
+                }
+            )
         );
     }
 }
