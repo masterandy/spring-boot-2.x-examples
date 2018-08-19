@@ -28,3 +28,4 @@ spring-boot-webflux-websocket/.mvn/
 spring-boot-rabbitmq/.mvn/
 spring-boot-swagger/.mvn/
 spring-boot-webflux-api/.mvn/
+spring-boot-webflux-annotation-api/.mvn/
