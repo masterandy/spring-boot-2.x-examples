@@ -81,9 +81,9 @@ discovery.zen.ping.unicast.hosts: ["192.168.1.145:9300", "192.168.1.145:9301", "
 代码：[spring-boot-elasticsearch](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-elasticsearch)
 
 如果你懒得配置elasticsearch，可以到我上传的百度云这里下载，下载下来记得改一下配置文件的ip地址就可以使用了
-```js
+
 链接：https://pan.baidu.com/s/1rgJ0VxOIWsDEXcJGXrkMpg 密码：uaw7
-```
+
 # 总结
 打字好累
 ![](https://i.imgur.com/NA6Uji2.gif)
