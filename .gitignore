@@ -35,3 +35,4 @@ spring-boot-dubbo-zookeeper/spring-boot-dubbo-zookeeper-consumer/.mvn/
 spring-boot-dubbo-zookeeper/spring-boot-dubbo-zookeeper.iml
 spring-boot-thymeleaf/.mvn/
 spring-boot-freemarker/.mvn/
+spring-boot-exception/.mvn/
