@@ -24,6 +24,14 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-webflux-websocket](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webflux-websocket)
 
+* [spring-boot-dubbo-zookeeper](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-dubbo-zookeeper)
+
+* [spring-boot-thymeleaf](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-thymeleaf)
+
+* [spring-boot-freemarker](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-freemarker)
+
+* [spring-boot-exception](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-exception)
+
 
 ### 感谢
 - 例程有一部分整理于网络,谢谢大大们的分享
