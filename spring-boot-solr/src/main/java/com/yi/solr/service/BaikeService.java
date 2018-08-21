@@ -1,7 +1,10 @@
 package com.yi.solr.service;
 
 import com.yi.solr.model.Baike;
+import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.response.FacetField;
+import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocumentList;
 import org.apache.solr.common.SolrInputDocument;
@@ -35,5 +38,29 @@ public interface BaikeService {
      */
     void addDocument(SolrInputDocument doc) throws IOException, SolrServerException;
 
+    /**
+     * 查询所有数据
+     * @return
+     * @throws IOException
+     * @throws SolrServerException
+     */
     SolrDocumentList queryAll() throws IOException, SolrServerException;
+
+    /**
+     * 分组查询
+     * @param query 查询条件
+     * @return
+     * @throws IOException
+     * @throws SolrServerException
+     */
+    List<FacetField> group(SolrQuery query) throws IOException, SolrServerException;
+
+    /**
+     * 按条件搜索
+     * @param query 查询条件
+     * @return
+     * @throws IOException
+     * @throws SolrServerException
+     */
+    SolrDocumentList queryConditions(SolrQuery query) throws IOException, SolrServerException;
 }

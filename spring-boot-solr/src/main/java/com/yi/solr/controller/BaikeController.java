@@ -4,7 +4,9 @@ import com.yi.solr.model.Baike;
 import com.yi.solr.service.BaikeService;
 import com.yi.solr.utils.MessageResult;
 import com.yi.solr.utils.SolrDocBeanUtil;
+import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.response.FacetField;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +19,9 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 测试
+ * solr执行操作
+ * @author YI
+ * @date 2018-8-21 21:23:34
  */
 @RestController
 @RequestMapping("/solr")
@@ -25,6 +29,10 @@ public class BaikeController {
     @Autowired
     BaikeService baikeService;
 
+    /**
+     * 初始化数据,项目第一次启动的时候执行一下这个接口，插入数据到solr中
+     * @return
+     */
     @RequestMapping("/init")
     public MessageResult init(){
         MessageResult result = MessageResult.ok();
@@ -40,7 +48,6 @@ public class BaikeController {
         list2.add("小说");
         Baike baike2 = new Baike(2, "全职法师", list2, 1000000, 10, "乱", "男", 1000, 0, new Date(), new Date());
 
-
         baikeList.add(baike1);
         baikeList.add(baike2);
 
@@ -54,6 +61,10 @@ public class BaikeController {
         return result;
     }
 
+    /**
+     * 查询所有数据
+     * @return
+     */
     @RequestMapping("/queryAll")
     public MessageResult queryAll(){
         MessageResult result = MessageResult.ok();
@@ -61,6 +72,139 @@ public class BaikeController {
 
         try {
             solrDocumentList = baikeService.queryAll();
+        } catch (IOException | SolrServerException e) {
+            result = MessageResult.errorMsg(e.getMessage());
+            e.printStackTrace();
+        }
+
+        List<Baike> baikes = (List<Baike>)SolrDocBeanUtil.toBeanList(solrDocumentList, Baike.class);
+        result.setData(baikes);
+
+        return result;
+    }
+
+    /**
+     * 分组查询
+     * @return
+     */
+    @RequestMapping("/group")
+    public MessageResult group(){
+        MessageResult result = MessageResult.ok();
+        SolrQuery query = new SolrQuery();
+
+        // 设置查询字符串 * 号代表所有
+        query.setQuery("*:*");
+
+        // 设置行
+        query.setRows(5);
+
+        // 按照作者分组
+        query.addFacetField("name");
+        List<FacetField> group = null;
+        try {
+            group = baikeService.group(query);
+        } catch (IOException | SolrServerException e) {
+            result = MessageResult.errorMsg(e.getMessage());
+            e.printStackTrace();
+        }
+
+        result.setData(group);
+
+        return result;
+    }
+
+    /**
+     * 根据条件查询并按照点赞数排序
+     * @return
+     */
+    @RequestMapping("/queryGood")
+    public MessageResult queryGood() {
+        MessageResult result = MessageResult.ok();
+        SolrQuery query = new SolrQuery("*:*");
+
+        // 设置返回哪些的列
+        query.addField("*");
+        // 设定开始序号
+        query.setStart(0);
+        // 设定返回的行数
+        query.setRows(5);
+        // 设置按照点赞数排序
+        query.setSort(new SolrQuery.SortClause("good", "desc"));
+
+        SolrDocumentList solrDocumentList = null;
+
+        try {
+            solrDocumentList = baikeService.queryConditions(query);
+        } catch (IOException | SolrServerException e) {
+            result = MessageResult.errorMsg(e.getMessage());
+            e.printStackTrace();
+        }
+
+        List<Baike> baikes = (List<Baike>)SolrDocBeanUtil.toBeanList(solrDocumentList, Baike.class);
+        result.setData(baikes);
+
+        return result;
+    }
+
+    /**
+     * 根据条件模糊查询
+     * @return
+     */
+    @RequestMapping("/queryName")
+    public MessageResult queryName() {
+        MessageResult result = MessageResult.ok();
+        SolrQuery query = new SolrQuery("*:*");
+
+        // 设置返回哪些的列
+        query.addField("*");
+        // 设定开始序号
+        query.setStart(0);
+        // 设定返回的行数
+        query.setRows(5);
+
+        // 等价sql： name like '海%'
+        query.addFilterQuery("name:海*");
+
+        SolrDocumentList solrDocumentList = null;
+
+        try {
+            solrDocumentList = baikeService.queryConditions(query);
+        } catch (IOException | SolrServerException e) {
+            result = MessageResult.errorMsg(e.getMessage());
+            e.printStackTrace();
+        }
+
+        List<Baike> baikes = (List<Baike>)SolrDocBeanUtil.toBeanList(solrDocumentList, Baike.class);
+        result.setData(baikes);
+
+        return result;
+    }
+
+    /**
+     * 按照范围搜索
+     * @return
+     */
+    @RequestMapping("/queryInterval")
+    public MessageResult queryInterval() {
+        MessageResult result = MessageResult.ok();
+        SolrQuery query = new SolrQuery("*:*");
+
+        // 设置返回哪些的列
+        query.addField("*");
+        // 设定开始序号
+        query.setStart(0);
+        // 设定返回的行数
+        query.setRows(5);
+
+        // 等价sql：SL >= 20
+//        query.addFilterQuery("good:[1000 TO *]");
+        // 等价sql：SL > 20
+        query.addFilterQuery("good:{1001 TO *]");
+
+        SolrDocumentList solrDocumentList = null;
+
+        try {
+            solrDocumentList = baikeService.queryConditions(query);
         } catch (IOException | SolrServerException e) {
             result = MessageResult.errorMsg(e.getMessage());
             e.printStackTrace();

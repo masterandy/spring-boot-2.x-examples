@@ -5,6 +5,8 @@ import com.yi.solr.service.BaikeService;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
+import org.apache.solr.client.solrj.request.QueryRequest;
+import org.apache.solr.client.solrj.response.FacetField;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocumentList;
@@ -60,6 +62,32 @@ public class BaikeServiceImpl implements BaikeService {
 
         // 查询结果
         SolrDocumentList docs = queryResponse.getResults();
+
+        return docs;
+    }
+
+    @Override
+    public List<FacetField> group(SolrQuery query) throws IOException, SolrServerException {
+        // 创建一个查询请求
+        QueryRequest qryReq = new QueryRequest(query);
+
+        // 创建一个查询响应
+        QueryResponse resp = qryReq.process(solrClient);
+
+        List<FacetField> facetFields = resp.getFacetFields();
+
+        return facetFields;
+    }
+
+    @Override
+    public SolrDocumentList queryConditions(SolrQuery query) throws IOException, SolrServerException {
+        QueryResponse solrRes = solrClient.query(query);
+
+        System.out.println("Response:" + solrRes.getResponse());
+        System.out.println("ResponseHeader:" + solrRes.getResponseHeader());
+
+        // 执行搜索条件
+        SolrDocumentList docs = solrRes.getResults();
 
         return docs;
     }
