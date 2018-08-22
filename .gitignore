@@ -39,3 +39,4 @@ spring-boot-exception/.mvn/
 spring-boot-banner/.mvn/
 spring-boot-solr/.mvn/
 spring-boot-mongodb/.mvn/
+spring-boot-mybatis/.mvn/
