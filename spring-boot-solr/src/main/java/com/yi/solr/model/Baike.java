@@ -52,12 +52,12 @@ public class Baike implements Serializable {
     @Field
     private String gender;
     /**
-     * 或者获得的金币打赏
+     * 获得的金币打赏
      */
     @Field
     private Integer goldCoin;
     /**
-     * 书本状态，0：上架、1：下架
+     * 书本状态，0：上架、-1：下架
      */
     @Field
     private int status = 0;

@@ -62,7 +62,9 @@ solr-7.3.1/server/solr/baike_core/conf
 我们重新启动solr，再分词测试
 ![](https://i.imgur.com/d8yr3ys.png)
 
-好了接下来就是写测试代码了
+好了接下来就是写测试代码了,运行效果：
+![](https://i.imgur.com/uG9F7Aa.jpg)
+
 代码：https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-solr
 
 ### 问题建议

@@ -7,7 +7,6 @@ import com.yi.solr.utils.SolrDocBeanUtil;
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.FacetField;
-import org.apache.solr.client.solrj.response.UpdateResponse;
 import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -35,7 +34,7 @@ public class BaikeController {
      */
     @RequestMapping("/init")
     public MessageResult init(){
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
         List<Baike> baikeList = new ArrayList<>();
 
         List<String> list1 = new ArrayList<>();
@@ -54,7 +53,52 @@ public class BaikeController {
         try {
             baikeService.addBeans(baikeList);
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setMsg(e.getMessage());
+            result.setCode(-1);
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    /**
+     * 更新数据
+     * @param id id
+     * @param status 书本状态，0：上架、-1：下架
+     * @return
+     */
+    @RequestMapping("/updata")
+    public MessageResult updata(int id, int status){
+        MessageResult result = new MessageResult();
+
+        SolrQuery query = new SolrQuery("*:*");
+
+        // 设置返回哪些的列
+        query.addField("*");
+        // 设定开始序号
+        query.setStart(0);
+
+        query.addFilterQuery("id:" + id);
+
+        try {
+            // 根据id查找数据
+            SolrDocumentList solrDocumentList = baikeService.queryConditions(query);
+            List<Baike> baikes = (List<Baike>)SolrDocBeanUtil.toBeanList(solrDocumentList, Baike.class);
+
+            baikes.forEach(baike -> {
+                baike.setStatus(status);
+                try {
+                    // 跟新数据
+                    baikeService.addBean(baike);
+                } catch (IOException | SolrServerException e) {
+                    result.setCode(-1);
+                    result.setData(e.getMessage());
+                    e.printStackTrace();
+                }
+            });
+        } catch (IOException | SolrServerException e) {
+            result.setCode(-1);
+            result.setData(e.getMessage());
             e.printStackTrace();
         }
 
@@ -67,20 +111,23 @@ public class BaikeController {
      */
     @RequestMapping("/queryAll")
     public MessageResult queryAll(){
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
+        MessageResult respMessage = new MessageResult();
         SolrDocumentList solrDocumentList = null;
 
         try {
             solrDocumentList = baikeService.queryAll();
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setCode(-1);
+            result.setMsg(e.getMessage());
             e.printStackTrace();
         }
 
         List<Baike> baikes = (List<Baike>)SolrDocBeanUtil.toBeanList(solrDocumentList, Baike.class);
         result.setData(baikes);
+        respMessage.setData(baikes);
 
-        return result;
+        return respMessage;
     }
 
     /**
@@ -89,7 +136,7 @@ public class BaikeController {
      */
     @RequestMapping("/group")
     public MessageResult group(){
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
         SolrQuery query = new SolrQuery();
 
         // 设置查询字符串 * 号代表所有
@@ -104,7 +151,8 @@ public class BaikeController {
         try {
             group = baikeService.group(query);
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setCode(-1);
+            result.setMsg(e.getMessage());
             e.printStackTrace();
         }
 
@@ -119,7 +167,7 @@ public class BaikeController {
      */
     @RequestMapping("/queryGood")
     public MessageResult queryGood() {
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
         SolrQuery query = new SolrQuery("*:*");
 
         // 设置返回哪些的列
@@ -136,7 +184,8 @@ public class BaikeController {
         try {
             solrDocumentList = baikeService.queryConditions(query);
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setCode(-1);
+            result.setMsg(e.getMessage());
             e.printStackTrace();
         }
 
@@ -152,7 +201,7 @@ public class BaikeController {
      */
     @RequestMapping("/queryName")
     public MessageResult queryName() {
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
         SolrQuery query = new SolrQuery("*:*");
 
         // 设置返回哪些的列
@@ -170,7 +219,8 @@ public class BaikeController {
         try {
             solrDocumentList = baikeService.queryConditions(query);
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setMsg(e.getMessage());
+            result.setCode(-1);
             e.printStackTrace();
         }
 
@@ -186,7 +236,7 @@ public class BaikeController {
      */
     @RequestMapping("/queryInterval")
     public MessageResult queryInterval() {
-        MessageResult result = MessageResult.ok();
+        MessageResult result = new MessageResult();
         SolrQuery query = new SolrQuery("*:*");
 
         // 设置返回哪些的列
@@ -199,14 +249,15 @@ public class BaikeController {
         // 等价sql：SL >= 20
 //        query.addFilterQuery("good:[1000 TO *]");
         // 等价sql：SL > 20
-        query.addFilterQuery("good:{1001 TO *]");
+        query.addFilterQuery("good:{1000 TO *]");
 
         SolrDocumentList solrDocumentList = null;
 
         try {
             solrDocumentList = baikeService.queryConditions(query);
         } catch (IOException | SolrServerException e) {
-            result = MessageResult.errorMsg(e.getMessage());
+            result.setMsg(e.getMessage());
+            result.setCode(-1);
             e.printStackTrace();
         }
 
