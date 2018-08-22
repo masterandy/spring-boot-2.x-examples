@@ -14,6 +14,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-solr](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-solr)
 
+* [spring-boot-docker-fsatdfs](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-docker-fsatdfs)
+
 * [spring-boot-kafka](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-kafka)
 
 * [spring-boot-rabbitmq](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-rabbitmq)
