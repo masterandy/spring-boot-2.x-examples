@@ -21,7 +21,10 @@
 ![](https://i.imgur.com/ZFXgkNK.jpg)
 
 项目启动之后请求：
-
+```
+http://localhost:9091/hello/xiaohua
+http://localhost:9091/hello/goodbye/meinv
+```
 
 ### 问题建议
 
