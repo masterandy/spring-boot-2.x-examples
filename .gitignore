@@ -41,3 +41,4 @@ spring-boot-solr/.mvn/
 spring-boot-mongodb/.mvn/
 spring-boot-mybatis/.mvn/
 spring-boot-mybatis-druid/.mvn/
+spring-boot-security/.mvn/
