@@ -38,6 +38,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-mongodb](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mongodb)
 
+* [spring-boot-webflux-mongodb](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webflux-mongodb)
+
 * [spring-boot-mybatis](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis)
 
 * [spring-boot-mybatis-druid](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-druid)
