@@ -23,7 +23,20 @@ public interface PersonRepository extends ReactiveMongoRepository<Baike, Integer
      */
     Flux<Baike> findByBad(Integer bad);
 
+    /**
+     * 根据标签查找，按照创建时间排序
+     * @param tag 标签
+     * @param of    分页
+     * @return
+     */
     Flux<Baike> findByTagOrderByCrateDate(String tag, PageRequest of);
 
+    /**
+     * 根据标签、点赞数、鄙视数范围查找
+     * @param tag   标签
+     * @param good  点赞数
+     * @param bad   鄙视数
+     * @return
+     */
     Flux<Baike> findByTagAndGoodBeforeAndBadAfter(String tag, int good, int bad);
 }
