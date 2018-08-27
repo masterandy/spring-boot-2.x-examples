@@ -38,5 +38,5 @@ public interface PersonRepository extends ReactiveMongoRepository<Baike, Integer
      * @param bad   鄙视数
      * @return
      */
-    Flux<Baike> findByTagAndGoodBeforeAndBadAfter(String tag, int good, int bad);
+    Flux<Baike> findByTagAndGoodGreaterThanAndBadLessThan(String tag, int good, int bad);
 }

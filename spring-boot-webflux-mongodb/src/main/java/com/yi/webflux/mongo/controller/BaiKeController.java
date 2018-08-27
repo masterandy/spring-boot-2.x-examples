@@ -33,22 +33,24 @@ public class BaiKeController {
     @RequestMapping("/addbaike")
     public Flux<ResponseEntity<Baike>> addDict() {
         List<String> list1 = new ArrayList<>();
-        list1.add("文学");
+        list1.add("玄幻");
         list1.add("小说");
-        Baike baike1 = new Baike(1, "老人与海", list1, 1000, 10, "海明威", "男", 100, 0, new Date(), new Date());
+        Baike baike1 = new Baike(3, "斗罗大陆", list1, 1050, 8, "唐家三少", "男", 500, 0, new Date(), new Date());
 
         List<String> list2 = new ArrayList<>();
-        list2.add("魔幻");
+        list2.add("玄幻");
         list2.add("小说");
-        Baike baike2 = new Baike(2, "全职法师", list2, 1000000, 5, "乱", "男", 1000, 0, new Date(), new Date());
+        Baike baike2 = new Baike(4, "完美世界", list2, 700, 12, "辰东", "男", 300, 0, new Date(), new Date());
 
         List<Baike> list = new ArrayList<>();
         list.add(baike1);
         list.add(baike2);
+        personRepository.insert(baike1);
+//        return personRepository.insert(baike1)
+//                .map(ResponseEntity::ok)
+//                .defaultIfEmpty(ResponseEntity.notFound().build());
 
-        return personRepository.saveAll(list)
-                .map(ResponseEntity::ok)
-                .defaultIfEmpty(ResponseEntity.notFound().build());
+        return null;
     }
 
     /**
@@ -74,7 +76,7 @@ public class BaiKeController {
     }
 
     /**
-     * 查询comment的bad属性大于等于一定数量的Baike对象
+     * 查询comment的bad属性等于一定数量的Baike对象
      * @param bad
      * @return
      */
@@ -85,6 +87,7 @@ public class BaiKeController {
 
     /**
      * 检索置顶标签，分页显示
+     * http://127.0.0.1:8080/mongodb/baike/tagPageNum?tag=魔幻&page=1
      * @param tag       标签名称
      * @param page
      * @return
@@ -97,7 +100,8 @@ public class BaiKeController {
     }
 
     /**
-     *  查询点赞数小于good，负面评价大于bad的所有Baike
+     *  查询点赞数大于good，负面评价小于bad的所有Baike
+     *  http://127.0.0.1:8080/mongodb/baike/tagRange?tag=魔幻&good=999999&bad=6
      * @param tag   标签名称
      * @param good  ＜(＾－＾)＞ 你最棒 点赞数
      * @param bad   (｡•ˇ‸ˇ•｡)滚犊子    负面数
@@ -105,7 +109,7 @@ public class BaiKeController {
      */
     @RequestMapping("/baike/tagRange")
     public Flux<Baike> findBaike(String tag, int good, int bad) {
-        return personRepository.findByTagAndGoodBeforeAndBadAfter(tag, good, bad);
+        return personRepository.findByTagAndGoodGreaterThanAndBadLessThan(tag, good, bad);
     }
 
     /**
