@@ -44,3 +44,4 @@ spring-boot-mybatis-druid/.mvn/
 spring-boot-security/.mvn/
 spring-boot-jpa/.mvn/
 spring-boot-email/.mvn/
+spring-boot-aop-log/.mvn/

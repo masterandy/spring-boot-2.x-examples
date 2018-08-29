@@ -52,6 +52,9 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-email](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-email)
 
+* [spring-boot-aop-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-aop-log)
+
+
 ### 感谢
 - 例程有一部分整理于网络,谢谢大大们的分享
 
