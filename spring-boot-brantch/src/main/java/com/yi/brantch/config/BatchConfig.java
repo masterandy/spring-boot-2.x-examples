@@ -74,7 +74,7 @@ public class BatchConfig implements BatchConfigurer {
     public JobRegistryBeanPostProcessor jobRegistryBeanPostProcessor() {
         JobRegistryBeanPostProcessor jobRegistryBeanPostProcessor = new JobRegistryBeanPostProcessor();
         jobRegistryBeanPostProcessor.setJobRegistry(jobRegistry());
-        
+
         return jobRegistryBeanPostProcessor;
     }
 
