@@ -48,3 +48,4 @@ spring-boot-aop-log/.mvn/
 spring-boot-brantch/.mvn/
 spring-boot-log/.mvn/
 spring-boot-redis/.mvn/
+spring-boot-dubbo-zookeeper-hystrix/.mvn/
