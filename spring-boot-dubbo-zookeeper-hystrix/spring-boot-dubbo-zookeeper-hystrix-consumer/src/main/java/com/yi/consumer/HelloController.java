@@ -1,7 +1,7 @@
 package com.yi.consumer;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.yi.base.HelloService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,11 +14,28 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-    @Autowired
+    /**
+     * dubbo消费
+     */
+    @Reference(
+            version = "${hello.service.version}",
+            application = "${dubbo.application.id}",
+            registry = "${dubbo.registry.id}",
+            parameters={
+                    "coreSize","10",
+                    "maximumSize","20",
+                    "keepAliveTimeMinutes","1",
+                    "requestVolumeThreshold","20",
+                    "sleepWindowInMilliseconds","5000",
+                    "errorThresholdPercentage","50",
+                    "timeoutInMilliseconds","1000",
+                    "fallback","demoFallback"
+            }
+    )
     private HelloService helloService;
 
     /**
-     * localhost:8012/hello/xiaoming
+     * localhost:9091/hello/xiaoming
      * @param name
      * @return
      */
