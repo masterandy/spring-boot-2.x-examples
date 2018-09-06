@@ -8,5 +8,9 @@ import com.alibaba.dubbo.common.extension.SPI;
  */
 @SPI
 public interface Fallback {
+    /**
+     * 业务失败返回处理函数
+     * @return
+     */
     Object invoke();
 }

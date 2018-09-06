@@ -79,7 +79,7 @@ public class DemoFallback implements Fallback {
 }
 ```
 ### 2、按dubbo SPI扩展规则进行配置
-1. resources目录增加文件/META-INF/dubbo/com.netease.hystrix.dubbo.rpc.filter.Fallback
+1. resources目录增加文件/META-INF/dubbo/com.netease.hystrix.dubbo.rpc.filter.Fallback（此文件名必须是Fallback类的包名，不然会找不到）
 2. demoFallback=com.netease.urs.dubbo.rpc.DemoFallback
 
 ### 3、dubbo:reference增加method fallback配置

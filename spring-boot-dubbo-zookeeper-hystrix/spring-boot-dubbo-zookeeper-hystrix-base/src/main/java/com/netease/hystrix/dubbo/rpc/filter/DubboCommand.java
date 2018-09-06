@@ -29,6 +29,7 @@ public class DubboCommand extends HystrixCommand<Result> {
         this.fallbackName = fallbackName;
     }
 
+    @Override
     protected Result run() throws Exception {
         Result result = invoker.invoke(invocation);
         //如果远程调用异常，抛出异常执行降级逻辑
