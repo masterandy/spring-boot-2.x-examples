@@ -23,12 +23,6 @@
             <artifactId>spring-boot-dubbo-zookeeper-hystrix-base</artifactId>
             <version>${spring-boot-dubbo-zookeeper-base.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.netease</groupId>
-            <artifactId>dubbo-hystrix-support</artifactId>
-            <version>0.0.1</version>
-        </dependency>
     </dependencies>
 
     <build>

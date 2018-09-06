@@ -14,7 +14,7 @@
 	<dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" client="zkclient" />
 	
 	<!-- 生成远程服务代理，可以和本地 bean 一样使用 testService -->
-	<dubbo:reference id="demoService" interface="base.HelloService" check="false">
+	<dubbo:reference id="demoService" interface="com.yi.base.HelloService" check="false">
 		<!--线程池相关参数设置，默认使用同步队列，避免队列过大造成外部等待线程过多造成系统血崩 -->
 		<dubbo:parameter key="coreSize" value="10"/>
 		<dubbo:parameter key="maximumSize" value="20"/>
@@ -26,6 +26,7 @@
 		<dubbo:parameter key="errorThresholdPercentage" value="50"/>
 		<dubbo:parameter key="timeoutInMilliseconds" value="1000"/>
 
+		<!--熔断回调-->
 		<dubbo:parameter key="fallback" value="demoFallback"/>
 	</dubbo:reference>
 	

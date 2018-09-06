@@ -17,7 +17,7 @@
 	<dubbo:protocol name="dubbo" port="-1" />
 	
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="base.HelloService"
+	<dubbo:service interface="com.yi.base.HelloService"
 		ref="demoService"/>
 		
 	<!-- 和本地 bean 一样实现服务 -->

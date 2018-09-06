@@ -1,4 +1,4 @@
-package base;
+package com.yi.base;
 
 /**
  * 对外提供公共的接口服务

@@ -1,1 +1,0 @@
-demoFallback=com.netease.hystrix.dubbo.rpc.filter.DemoFallback

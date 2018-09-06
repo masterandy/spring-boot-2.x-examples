@@ -4,10 +4,10 @@ import com.alibaba.dubbo.common.Constants;
 import com.alibaba.dubbo.common.URL;
 import com.alibaba.dubbo.common.extension.Activate;
 import com.alibaba.dubbo.rpc.*;
-import com.netease.hystrix.dubbo.rpc.filter.config.SetterFactory;
+import com.netease.hystrix.dubbo.rpc.filter.config.*;
 import com.netflix.hystrix.HystrixCommand;
 
-@Activate(group = Constants.CONSUMER)
+@Activate(group = Constants.CONSUMER, before = "future")
 public class HystrixFilter implements Filter {
 
     @Override

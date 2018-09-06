@@ -1,6 +1,6 @@
 package com.yi.provider.service;
 
-import base.HelloService;
+import com.yi.base.HelloService;
 
 import java.util.concurrent.TimeUnit;
 

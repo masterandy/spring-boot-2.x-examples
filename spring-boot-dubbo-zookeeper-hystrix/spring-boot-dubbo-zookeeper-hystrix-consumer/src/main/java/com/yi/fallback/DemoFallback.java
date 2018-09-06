@@ -1,4 +1,6 @@
-package com.netease.hystrix.dubbo.rpc.filter;
+package com.yi.fallback;
+
+import com.netease.hystrix.dubbo.rpc.filter.Fallback;
 
 /**
  * 回调函数
