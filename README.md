@@ -64,6 +64,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-dubbo-zookeeper-hystrix](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-dubbo-zookeeper-hystrix)
 
+* [spring-boot-redis-pub-sub](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-redis-pub-sub)
+
 
 ### 感谢
 - 例程有一部分整理于网络,谢谢大大们的分享
