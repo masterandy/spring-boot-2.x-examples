@@ -93,6 +93,19 @@ public class DemoFallback implements Fallback {
 
 `<dubbo:parameter key="fallbackMaxConcurrentRequests" value="50"/>`
 
+# 画重点,敲黑板
+在我的源码中我删除了xml配置文件,dubbo全部是使用注解和配置完成,让我们更简单的完成操作,我们来看看吧:
+
+生产者暴露服务
+
+![](https://i.imgur.com/L9Emelb.jpg)
+
+消费者使用
+
+![](https://i.imgur.com/iA2xVxq.jpg)
+
+注解 parameters 中对应的参数就是上文提到的**熔断保护**的参数，好了，快乐的写代码吧！
+
 ### 感谢
 基于此大佬的源码修改而来: [dubbo-hystrix-support](https://github.com/yskgood/dubbo-hystrix-support)
 移植了源码,增加了部分例程,例如回调.
