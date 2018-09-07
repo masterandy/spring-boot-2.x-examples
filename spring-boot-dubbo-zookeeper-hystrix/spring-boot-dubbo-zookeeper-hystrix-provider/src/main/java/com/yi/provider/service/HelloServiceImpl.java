@@ -29,6 +29,11 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String sayGoodbye(String name) {
+        try {
+            TimeUnit.SECONDS.sleep(15);
+        } catch (InterruptedException e) {
+
+        }
         return "Goodbye "+name+" !";
     }
 }

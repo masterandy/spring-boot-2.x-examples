@@ -29,7 +29,8 @@ public class HelloController {
                     "sleepWindowInMilliseconds","5000",
                     "errorThresholdPercentage","50",
                     "timeoutInMilliseconds","1000",
-                    "fallback","demoFallback"
+                    "sayHello","sayHello",
+                    "sayGoodbye","sayGoodbye"
             }
     )
     private HelloService helloService;

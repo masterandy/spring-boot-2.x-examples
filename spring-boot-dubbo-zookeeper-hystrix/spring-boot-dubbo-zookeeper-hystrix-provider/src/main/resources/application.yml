@@ -6,7 +6,7 @@ server:
 dubbo:
   registry:
     protocol: zookeeper
-    address: 192.168.99.100:2181
+    address: 134.175.35.133:2181
     id: registry-1
   protocol:
     port: -1

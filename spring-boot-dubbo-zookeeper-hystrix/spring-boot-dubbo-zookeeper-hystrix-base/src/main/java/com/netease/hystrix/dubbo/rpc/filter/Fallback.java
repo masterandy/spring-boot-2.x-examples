@@ -4,7 +4,8 @@ import com.alibaba.dubbo.common.extension.SPI;
 
 /**
  * 业务失败返回处理函数
- * Created by yangshaokai on 2018/2/26.
+ * @author YI
+ * @date 2018-9-7 15:07:51
  */
 @SPI
 public interface Fallback {

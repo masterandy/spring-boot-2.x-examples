@@ -3,15 +3,14 @@ package com.yi.fallback;
 import com.netease.hystrix.dubbo.rpc.filter.Fallback;
 
 /**
- * 回调函数
+ * SayHello 的熔断
  * @author YI
- * @date 2018-9-5 21:16:31
+ * @date 2018-9-7 15:04:42
  */
-public class DemoFallback implements Fallback {
-
+public class SayHelloFallback implements Fallback {
     @Override
     public Object invoke() {
-        System.out.println("sayHello 方法回调。。。");
+        System.out.println("SayHello 方法的熔断！");
         return null;
     }
 }

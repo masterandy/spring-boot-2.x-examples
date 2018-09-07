@@ -1,1 +1,2 @@
-demoFallback=com.yi.fallback.DemoFallback
+sayHello=com.yi.fallback.SayHelloFallback
+sayGoodbye=com.yi.fallback.SayGoodbyeFallback
