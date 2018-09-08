@@ -51,3 +51,4 @@ spring-boot-redis/.mvn/
 spring-boot-dubbo-zookeeper-hystrix/.mvn/
 spring-boot-redis-pub-sub/.mvn/
 spring-boot-redis-geo/.mvn/
+spring-boot-dubbo-zookeeper-hystrix-annotation/.mvn/
