@@ -24,15 +24,13 @@
 <h2></h2>
 
 <div class="center-button">
-    <a class="layui-btn layui-btn layui-btn-sm" href="/userInfo">
+    <a class="layui-btn layui-btn-sm" href="/users/userInfo?userId=1">
         <i class="layui-icon">&#xe770;</i>查看用户信息</a>
     <h3></h3>
-    <a class="layui-btn layui-btn layui-btn-sm" href="/logout">
+    <a class="layui-btn layui-btn-sm" href="/users/logout?userId=1">
         <i class="layui-icon">&#xe640;</i>注销</a>
 </div>
 
-
 <script src="/layui/layui.js" charset="utf-8"></script>
-<script src="/js/index.js"></script>
 </body>
 </html>

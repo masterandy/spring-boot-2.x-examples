@@ -13,10 +13,9 @@
 	<link rel="stylesheet" href="/css/login.css" media="all">
 </head>
 <body>
-	<video class="video-player" preload="auto" autoplay="autoplay" loop="loop" data-height="1080" data-width="1920" height="1080" width="1920">
-	    <source src="/audio/login.mp4" type="video/mp4">
-	<</video>
-	<div class="video_mask"></div>
+	<div style="position:fixed; z-index: -1; width: 100%; height: 100%; left: 0px; top:0px;">
+    <img src="/image/login.jpg" width="100%" height="100%" />
+	</div>
 	<div class="login">
 	    <h1>系统登录</h1>
 	    <form class="layui-form">

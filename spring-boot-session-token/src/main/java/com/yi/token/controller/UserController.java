@@ -2,6 +2,7 @@ package com.yi.token.controller;
 
 import cn.hutool.core.bean.BeanUtil;
 import cn.hutool.core.util.StrUtil;
+import cn.hutool.json.JSONUtil;
 import com.yi.token.common.MessageResult;
 import com.yi.token.common.RedisOperator;
 import com.yi.token.config.Config;
@@ -23,8 +24,8 @@ import java.util.Date;
  */
 @RestController()
 @RequestMapping("/users")
-public class  RegistLoginController {
-    private static final Logger logger = LoggerFactory.getLogger(RegistLoginController.class);
+public class UserController {
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     public RedisOperator redis;
@@ -55,6 +56,8 @@ public class  RegistLoginController {
         usersVo.setPassword("");
         result.setData(usersVo);
 
+        redis.set(usersVo.getId().toString(), JSONUtil.toJsonStr(usersVo));
+
         CookieUtil.addCookie("userToken", usersVo.getUserToken());
         CookieUtil.addCookie("userId", String.valueOf(usersVo.getId()));
         logger.info("userToken : " + usersVo.getUserToken());
@@ -67,11 +70,24 @@ public class  RegistLoginController {
      * @param userId 用户id
      * @return
      */
-    @RequestMapping(value = "/logout", method = RequestMethod.POST)
+    @RequestMapping(value = "/logout", method = RequestMethod.GET)
     public MessageResult logout(String userId){
         redis.del(Config.USER_REDIS_SESSION + ":" + userId);
 
         return MessageResult.ok();
+    }
+
+    /**
+     * 用户信息
+     * @param userId 用户id
+     * @return
+     */
+    @RequestMapping(value = "/userInfo", method = RequestMethod.GET)
+    public MessageResult userInfo(String userId){
+        String s = redis.get(userId);
+        UsersVo usersVo = JSONUtil.toBean(s, UsersVo.class);
+
+        return MessageResult.ok(usersVo);
     }
 
     /**
