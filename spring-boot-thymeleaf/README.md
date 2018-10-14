@@ -4,7 +4,7 @@ thymeleaf 模板引擎
 ### 说明
 一个完整的实例
 
-```
+```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -37,7 +37,7 @@ thymeleaf 模板引擎
 ```
 
 后端：
-```
+```java
 /**
  * 调用前端模板并返回数据
  *
