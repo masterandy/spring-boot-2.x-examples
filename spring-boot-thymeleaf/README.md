@@ -2,24 +2,37 @@
 thymeleaf 模板引擎
 
 ### 说明
-thymeleaf的使用需要在html中加入
-```
-<html xmlns:th="http://www.w3.org/1999/xhtml">
-```
-
 一个完整的实例
 
 ```
 <!DOCTYPE html>
-<html xmlns:th="http://www.w3.org/1999/xhtml">
-    <head lang="en">
-        <meta charset="UTF-8" />
-        <title></title>
-    </head>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>用户列表</title>
+</head>
+<body>
+<h1 th:text="${hello}">Hello, Spring Boot!</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>生日</th>
+        <th>薪资</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.id}">0</td>
+        <td th:text="${user.name}">美女</td>
+        <td th:text="${user.age}">18</td>
+        <td th:text="${user.salary}">12345.50</td>
+    </tr>
+</table>
 
-    <body>
-        <h1 th:text="${say}"></h1>
-    </body>
+<select>
+    <option th:each="user:${userList}" th:value="${user.id}" th:text="${user.name}">我是默认值</option>
+</select>
+
+</body>
 </html>
 ```
 
@@ -27,14 +40,27 @@ thymeleaf的使用需要在html中加入
 ```
 /**
  * 调用前端模板并返回数据
+ *
  * @author YI
- * @date 2018-8-21 09:50:09
+ * @date 2018-10-14 20:11:26
  */
 @Controller
 public class HelloController {
     @RequestMapping("/")
     public String index(ModelMap map) {
-        map.addAttribute("say", "Hello World And Thymeleaf");
+        map.addAttribute("hello", "Hello, Spring Boot And Thymeleaf!");
+
+        List<User> list = new ArrayList<>();
+
+        User user1 = new User(1, "美女", 18, 12000.50);
+        User user2 = new User(2, "校花", 20, 10000.50);
+        User user3 = new User(3, "小萝莉", 16, 11000.50);
+
+        list.add(user1);
+        list.add(user2);
+        list.add(user3);
+
+        map.addAttribute("userList", list);
 
         return "index";
     }
@@ -42,7 +68,7 @@ public class HelloController {
 ```
 
 服务器启动后访问：http://localhost:8080
-![](https://i.imgur.com/CV7sh81.jpg)
+![](https://i.imgur.com/pK4mIjU.png)
 
 ### 问题建议
 
