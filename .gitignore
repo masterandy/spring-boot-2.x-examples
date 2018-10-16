@@ -54,3 +54,4 @@ spring-boot-redis-geo/.mvn/
 spring-boot-dubbo-zookeeper-hystrix-annotation/.mvn/
 spring-boot-websocket/.mvn/
 spring-boot-session-token/.mvn/
+spring-boot-memcached/.mvn/
