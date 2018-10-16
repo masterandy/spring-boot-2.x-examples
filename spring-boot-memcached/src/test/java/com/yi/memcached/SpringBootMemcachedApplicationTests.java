@@ -1,8 +1,6 @@
 package com.yi.memcached;
 
-import com.yi.memcached.annotation.EnableMemcached;
-import net.spy.memcached.MemcachedClient;
-import net.spy.memcached.internal.OperationFuture;
+import com.whalin.MemCached.MemCachedClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,19 +9,25 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@EnableMemcached
 public class SpringBootMemcachedApplicationTests {
 
     @Autowired
-    private MemcachedClient memcachedClient;
+    MemCachedClient memCachedClient;
 
     @Test
-    public void testCUD() throws Exception {
-        String key = "memcached_key";
-        OperationFuture<Boolean> set = this.memcachedClient.set(key, 10, System.currentTimeMillis());
+    public void contextLoads() {
+        boolean i = memCachedClient.set("id", "123456", 1000);
+        System.out.println(String.valueOf(i));
+        System.out.println(memCachedClient.get("id"));
 
-        Object object = this.memcachedClient.get(key);
-        System.err.println(object + "");
+        memCachedClient.replace("id","123");
+        memCachedClient.replace("ok","123");
+        System.out.println(memCachedClient.get("id"));
+
+        memCachedClient.delete("id");
+        System.out.println(memCachedClient.get("id"));
+        System.out.println(memCachedClient.get("ok"));
     }
+
 
 }

@@ -1,8 +1,9 @@
-memcached:
+memcache:
   servers: localhost:11211
-  protocol: BINARY
-  locatorType: CONSISTENT
-  opTimeout: 10000
-  username: null
-  password: null
-  health: true
+  weights: 5
+  initConn: 20
+  minConn: 10
+  maxConn: 50
+  maintSleep: 3000
+  nagle: false
+  socketTO: 3000
