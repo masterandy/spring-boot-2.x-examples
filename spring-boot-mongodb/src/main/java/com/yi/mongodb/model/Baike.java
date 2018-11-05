@@ -48,6 +48,7 @@ public class Baike implements Serializable {
 
     private Date crateDate = new Date();
 
+
     private Date updateDate = new Date();
 
     public Baike(Integer id, String desc, List<String> tag, int good, int bad, String name, String gender, Integer goldCoin, int status, Date crateDate, Date updateDate) {

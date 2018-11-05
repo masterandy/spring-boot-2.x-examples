@@ -78,6 +78,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-war](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-war) 
 
+* [spring-boot-scheduled](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-scheduled) 
+
 
 ### 感谢
 - 例程有一部分整理于网络,谢谢大大们的分享
