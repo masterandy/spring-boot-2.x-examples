@@ -126,7 +126,7 @@ public class EChartController {
 		for (int j = 1; j <= count; j++) {
 			result.put(j + "月", new Random().nextFloat());
 		}
-		
+
 		return result;
 	}
 }
