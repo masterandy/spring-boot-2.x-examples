@@ -21,9 +21,11 @@ public class EmailConfig {
     private static String password;
 
     @Bean
-    public void before() throws GeneralSecurityException {
+    public String before() throws GeneralSecurityException {
         // 配置，一次即可
         OhMyEmail.config(SMTP_QQ(false), username, password);
+
+        return "Successful";
     }
 
     @Value("${email.username}")
