@@ -35,7 +35,6 @@ public class LaGouTasks implements PageProcessor {
             .addHeader("Origin", "https://www.lagou.com")
             .addHeader("Referer", "https://www.lagou.com/jobs/list_Java")
             .addHeader("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.67 Safari/537.36")
-//            .addHeader("X-Anit-Forge-Code", "0")
             .addHeader("X-Anit-Forge-Token", "None")
             .addHeader("X-Requested-With", "XMLHttpRequest");
 
