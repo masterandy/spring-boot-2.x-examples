@@ -42,6 +42,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-mybatis](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis)
 
+* [spring-boot-mybatis-plus](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-plus)
+
 * [spring-boot-mybatis-druid](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-druid)
 
 * [spring-boot-mybatis-hikari](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-hikari)
