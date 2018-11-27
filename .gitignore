@@ -59,3 +59,6 @@ spring-boot-war/.mvn/
 spring-boot-scheduled/.mvn/
 spring-boot-echarts/.mvn/
 spring-boot-webmagic/.mvn/
+spring-boot-quartz/.mvn/
+spring-boot-quartz/mvnw.cmd
+spring-boot-quartz/mvnw
