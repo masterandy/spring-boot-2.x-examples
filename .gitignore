@@ -66,3 +66,6 @@ spring-boot-mybatis-plus/.mvn/
 spring-boot-mybatis-plus/mvnw.cmd
 spring-boot-mybatis-plus/mvnw
 spring-boot-current-mapper/.mvn/
+spring-boot-sql-interceptor/.mvn/
+spring-boot-sql-interceptor/mvnw.cmd
+spring-boot-sql-interceptor/mvnw
