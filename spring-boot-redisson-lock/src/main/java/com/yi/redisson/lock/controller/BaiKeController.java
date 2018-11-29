@@ -5,6 +5,8 @@ import com.yi.redisson.lock.model.Baike;
 import com.yi.redisson.lock.utils.MessageResult;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;
@@ -27,6 +29,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @RestController
 @RequestMapping("/kill")
 public class BaiKeController {
+    private static final Logger log = LoggerFactory.getLogger(BaiKeController.class);
+
     private final StringRedisTemplate redisTemplate;
     private final RedissonClient redissonClient;
 
@@ -83,7 +87,7 @@ public class BaiKeController {
             // 用户抢到商品累计
             String msg = "减少库存成功,共减少" + successNum.incrementAndGet();
             result.setMsg(msg);
-            System.out.println(msg);
+            log.info(msg);
 
             return result;
         } finally {
@@ -127,7 +131,7 @@ public class BaiKeController {
             // 用户抢到商品累计
             String msg = "减少库存成功,共减少" + successNum.incrementAndGet();
             result.setMsg(msg);
-            System.out.println(msg);
+            log.info(msg);
 
             return result;
         }
