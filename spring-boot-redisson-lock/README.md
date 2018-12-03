@@ -73,6 +73,13 @@ public MessageResult secKillRedis() {
 ![](https://i.imgur.com/tZolJkR.jpg)
 
 ### Redis事务方式秒杀
+##### spring的`redisTemplate`执行事务
+
+- 注意： 若要使用spring的`redisTemplate`执行事务，需要在开启事务后执行一个redis的查询操作（但不能使用查询到的值）。原因有两点：
+    - spring对redis事务的`exec()`方法返回结果做了处理（把返回值的 `OK`结果删掉）。
+        - 导致在事务中只有`set`等更新操作时，事务执行失败与成功返回的结果一样
+    - 事务过程中查询redis的值只会在事务执行成功后才放回。而在事务执行过程中只会返回`null`
+
 ```
 /**
  * 通过事务解决秒杀

@@ -70,6 +70,7 @@ public class BaiKeController {
         RLock rLock = redissonClient.getLock("baike_lock");
 
         try {
+            // 加锁
             rLock.lock();
             String baikeJson = redisTemplate.opsForValue().get("baike");
             Baike baike = JSONUtil.toBean(baikeJson, Baike.class);
@@ -91,6 +92,7 @@ public class BaiKeController {
 
             return result;
         } finally {
+            // 解锁
             rLock.unlock();
         }
     }
