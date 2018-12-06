@@ -72,3 +72,6 @@ spring-boot-sql-interceptor/mvnw
 spring-boot-redisson-lock/.mvn/
 spring-boot-redisson-lock/mvnw.cmd
 spring-boot-redisson-lock/mvnw
+spring-boot-mybatis-mutiple-datasource/.mvn/
+spring-boot-mybatis-mutiple-datasource/mvnw.cmd
+spring-boot-mybatis-mutiple-datasource/mvnw
