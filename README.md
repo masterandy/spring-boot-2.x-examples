@@ -60,7 +60,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-jpa](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-jpa)：JPA是供应商JDBCjdbc是一组规范，用于操作方便的数据库
 
-* [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个能够为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
+* [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
 
 * [spring-boot-email](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-email)：通过简单配置发送邮件，还可以自定义邮件模板
 
@@ -68,7 +68,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-log)：log彩色日志系统，可以打印漂亮的彩色日志
 
-* [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个能够为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
+* [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
 
 * [spring-boot-mybatis-sqlite](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-sqlite)：通过mybatis操作sqlite数据库
 
@@ -94,7 +94,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-echarts](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-echarts)：百度的商业产品图表库，通过简单的代码可以画出炫酷的图表
 
-* [spring-boot-webmagic](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webmagic)：基于WebMagic爬虫框架编写的爬虫
+* [spring-boot-webmagic](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webmagic)：基于WebMagic爬虫框架编写的爬虫,爬取伯乐在线和拉钩的数据
 
 
 ### 感谢
