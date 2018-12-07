@@ -5,7 +5,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 统一基础运行环境：
 * JDK：1.8.0_111
 * Maven：3.3.9
-* Spring Boot：2.0.4.RELEASE
+* Spring Boot：2.x
 
 详细的说明请进入项目中查看，里面会配有项目的Markdown文档。
 
@@ -98,7 +98,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 
 ### 感谢
-- 例程还有不足支出，请大家Issues ヾ(๑╹◡╹)ﾉ"
+- 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
 
 
