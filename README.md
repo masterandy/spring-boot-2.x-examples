@@ -105,5 +105,5 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 ### 问题建议
 
 - 联系我的邮箱：ilovey_hwy@163.com
-- 我的博客：http://www.hwy.ac.cn
+- 我的博客：https://www.hwy.ac.cn
 - GitHub：https://github.com/HWYWL
