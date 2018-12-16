@@ -60,6 +60,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-jpa](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-jpa)：JPA是供应商JDBCjdbc是一组规范，用于操作方便的数据库
 
+* [spring-boot-pagehelper](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-pagehelper)：PageHelper是一个开源的分页插件，可以非常方便的进行数据库查询分页操作
+
 * [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
 
 * [spring-boot-email](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-email)：通过简单配置发送邮件，还可以自定义邮件模板

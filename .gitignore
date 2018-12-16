@@ -75,3 +75,6 @@ spring-boot-redisson-lock/mvnw
 spring-boot-mybatis-mutiple-datasource/.mvn/
 spring-boot-mybatis-mutiple-datasource/mvnw.cmd
 spring-boot-mybatis-mutiple-datasource/mvnw
+spring-boot-pagehelper/mvnw.cmd
+spring-boot-pagehelper/mvnw
+spring-boot-pagehelper/.mvn/
