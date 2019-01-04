@@ -78,3 +78,6 @@ spring-boot-mybatis-mutiple-datasource/mvnw
 spring-boot-pagehelper/mvnw.cmd
 spring-boot-pagehelper/mvnw
 spring-boot-pagehelper/.mvn/
+spring-boot-elastic-job/.mvn/
+spring-boot-elastic-job/mvnw.cmd
+spring-boot-elastic-job/mvnw
