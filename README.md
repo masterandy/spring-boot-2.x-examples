@@ -94,6 +94,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-quartz](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-quartz)：Quartz 是一个开源作业调度框架,这里编写了它使用实例
 
+* [spring-boot-elastic-job](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-elastic-job)：Elastic-job 是由当当网基于quartz 二次开发之后的分布式调度解决方案
+
 * [spring-boot-echarts](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-echarts)：百度的商业产品图表库，通过简单的代码可以画出炫酷的图表
 
 * [spring-boot-webmagic](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webmagic)：基于WebMagic爬虫框架编写的爬虫,爬取伯乐在线和拉钩的数据
