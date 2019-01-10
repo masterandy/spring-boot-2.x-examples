@@ -82,3 +82,4 @@ spring-boot-elastic-job/.mvn/
 spring-boot-elastic-job/mvnw.cmd
 spring-boot-elastic-job/mvnw
 spring-boot-elasticsearch/spring-boot-elasticsearch.iml
+spring-boot-docker-fsatdfs/spring-boot-docker-fsatdfs.iml
