@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 提供者
+ *
  * @author YI
  * @date 2018-8-20 16:38:27
  */

@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 生产者提供服务
+ *
  * @author YI
  * @date 2018-8-20 17:04:57
  */
@@ -24,7 +25,7 @@ public class HelloServiceImpl implements HelloService {
         } catch (InterruptedException e) {
 
         }
-        return "Hello "+name+" !";
+        return "Hello " + name + " !";
     }
 
     @Override
@@ -34,6 +35,6 @@ public class HelloServiceImpl implements HelloService {
         } catch (InterruptedException e) {
 
         }
-        return "Goodbye "+name+" !";
+        return "Goodbye " + name + " !";
     }
 }
