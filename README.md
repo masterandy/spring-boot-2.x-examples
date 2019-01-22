@@ -100,6 +100,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-webmagic](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webmagic)：基于WebMagic爬虫框架编写的爬虫,爬取伯乐在线和拉钩的数据
 
+* [spring-boot-system](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-system)：系统基本信息监控
+
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
