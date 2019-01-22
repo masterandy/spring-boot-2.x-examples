@@ -86,3 +86,6 @@ spring-boot-docker-fsatdfs/spring-boot-docker-fsatdfs.iml
 spring-boot-system/.mvn/
 spring-boot-system/mvnw.cmd
 spring-boot-system/mvnw
+spring-boot-anima/mvnw.cmd
+spring-boot-anima/mvnw
+spring-boot-anima/.mvn/
