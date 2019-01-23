@@ -52,6 +52,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-current-mapper](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-current-mapper)：通用mapper，基于mybatis，极大的方便操作数据库，甚至可以自定义动态生成SQL
 
+* [spring-boot-anima](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-anima)：通用数据库操作框架，支持MySQL、SQLite、H2、Oracle、SqlServer等数据库
+
 * [spring-boot-mybatis-druid](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-druid)：DRUID是阿里巴巴开源平台上一个数据库连接池实现
 
 * [spring-boot-mybatis-hikari](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-hikari)：HiKariCP是数据库连接池，官方推荐使用，号称性能最好
