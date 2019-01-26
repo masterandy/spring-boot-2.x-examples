@@ -108,6 +108,7 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-tomcat-jsp](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-tomcat-jsp)：基于Tomcat容器运行的jsp页面
 
+* [spring-boot-jetty-jsp](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-jetty-jsp)：基于Jetty容器运行的jsp页面
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
