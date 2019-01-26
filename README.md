@@ -104,6 +104,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-system](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-system)：系统基本信息监控
 
+* [spring-boot-jetty](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-jetty)：jetty容器
+
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
