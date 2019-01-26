@@ -6,12 +6,14 @@ import java.util.List;
 
 /**
  * 自定义实现类
+ *
  * @author YI
  * @date 2018-11-27 14:40:31
  */
 public interface IBaiKeService {
     /**
      * 根据id查询数据
+     *
      * @param id id
      * @return
      */
@@ -19,18 +21,21 @@ public interface IBaiKeService {
 
     /**
      * 通过自定义sql查询
+     *
      * @return
      */
     List<Baike> selectListBySQL();
 
     /**
      * 查询所有数据
+     *
      * @return
      */
     List<Baike> selectListAll();
 
     /**
      * 根据条件查询，点赞数大于等于 good的数据
+     *
      * @param good 点赞数
      * @return
      */
@@ -38,6 +43,7 @@ public interface IBaiKeService {
 
     /**
      * 保存
+     *
      * @param baike 百科数据
      * @return id
      */
@@ -45,6 +51,7 @@ public interface IBaiKeService {
 
     /**
      * 批量保存
+     *
      * @param baikes 百科数据
      * @return
      */
@@ -52,6 +59,7 @@ public interface IBaiKeService {
 
     /**
      * 更新
+     *
      * @param baike 百科数据
      * @return
      */
@@ -59,6 +67,7 @@ public interface IBaiKeService {
 
     /**
      * 根据id删除
+     *
      * @param id id
      * @return
      */
