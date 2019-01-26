@@ -93,3 +93,6 @@ spring-boot-jetty/mvnw.cmd
 spring-boot-jetty/mvnw
 spring-boot-jetty/.gitignore
 spring-boot-jetty/.mvn/
+spring-boot-tomcat-jsp/mvnw.cmd
+spring-boot-tomcat-jsp/mvnw
+spring-boot-tomcat-jsp/.mvn/
