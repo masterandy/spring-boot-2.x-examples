@@ -89,3 +89,7 @@ spring-boot-system/mvnw
 spring-boot-anima/mvnw.cmd
 spring-boot-anima/mvnw
 spring-boot-anima/.mvn/
+spring-boot-jetty/mvnw.cmd
+spring-boot-jetty/mvnw
+spring-boot-jetty/.gitignore
+spring-boot-jetty/.mvn/
