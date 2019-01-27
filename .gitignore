@@ -99,3 +99,6 @@ spring-boot-tomcat-jsp/.mvn/
 spring-boot-jetty-jsp/mvnw.cmd
 spring-boot-jetty-jsp/mvnw
 spring-boot-jetty-jsp/.mvn/
+spring-boot-activemq/mvnw.cmd
+spring-boot-activemq/mvnw
+spring-boot-activemq/.mvn/
