@@ -20,6 +20,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-rabbitmq](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-rabbitmq)：rabbitmq消息队列
 
+* [spring-boot-activemq](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-activemq)：activemq消息队列
+
 * [spring-boot-swagger](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-swagger)：Swagger是一款RESTFUL接口的文档在线自动生成+功能测试功能软件
 
 * [spring-boot-webflux-api](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-webflux-api)：Spring WebFlux是基于响应式流编写的API接口
