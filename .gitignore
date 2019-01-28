@@ -102,3 +102,6 @@ spring-boot-jetty-jsp/.mvn/
 spring-boot-activemq/mvnw.cmd
 spring-boot-activemq/mvnw
 spring-boot-activemq/.mvn/
+spring-boot-xml/mvnw.cmd
+spring-boot-xml/mvnw
+spring-boot-xml/.mvn/
