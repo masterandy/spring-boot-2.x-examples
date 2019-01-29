@@ -105,3 +105,6 @@ spring-boot-activemq/.mvn/
 spring-boot-xml/mvnw.cmd
 spring-boot-xml/mvnw
 spring-boot-xml/.mvn/
+spring-boot-go-fastdfs/mvnw.cmd
+spring-boot-go-fastdfs/mvnw
+spring-boot-go-fastdfs/.mvn/
