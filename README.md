@@ -16,6 +16,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-docker-fsatdfs](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-docker-fsatdfs)：FastDFS文件系统，使用docker构建环境
 
+* [spring-boot-go-fastdfs](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-go-fastdfs)：go-FastDFS文件系统
+
 * [spring-boot-kafka](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-kafka)：kafka消息队列
 
 * [spring-boot-rabbitmq](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-rabbitmq)：rabbitmq消息队列
