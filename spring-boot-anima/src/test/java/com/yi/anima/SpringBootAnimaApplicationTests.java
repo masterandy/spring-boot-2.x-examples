@@ -24,6 +24,7 @@ public class SpringBootAnimaApplicationTests {
 
     @Test
     public void test2() {
+        // 查询所有数据
         List<Baike> baikes = baiKeService.selectListAll();
         System.out.println(baikes);
     }
