@@ -16,6 +16,7 @@ import java.util.Map;
 
 /**
  * 请求拦截
+ *
  * @author YI
  * @date 2018-8-6 22:46:09
  */
@@ -27,7 +28,7 @@ public class LogAspect {
     /**
      * 两个..代表所有子目录，最后括号里的两个..代表所有参数
      */
-    @Pointcut("execution( * com.yourui.web.controller..*(..))")
+    @Pointcut("execution( * com.yi.docker.controller..*(..))")
     public void logPointCut() {
     }
 
@@ -50,6 +51,7 @@ public class LogAspect {
 
     /**
      * returning的值和doAfterReturning的参数名一致
+     *
      * @param ret
      * @throws Throwable
      */
