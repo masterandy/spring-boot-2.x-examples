@@ -108,3 +108,6 @@ spring-boot-xml/.mvn/
 spring-boot-go-fastdfs/mvnw.cmd
 spring-boot-go-fastdfs/mvnw
 spring-boot-go-fastdfs/.mvn/
+spring-boot-webflux/.mvn/
+spring-boot-webflux/mvnw.cmd
+spring-boot-webflux/mvnw
