@@ -6,10 +6,9 @@ import cn.hutool.json.JSONUtil;
 import com.yi.go.fastdfs.config.ConstantProperties;
 import com.yi.go.fastdfs.model.GoFast;
 import com.yi.go.fastdfs.utils.MessageResult;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -22,7 +21,7 @@ import java.util.Map;
  * @author YI
  * @date 2019-1-29 10:41:09
  */
-@Controller
+@RestController
 @RequestMapping("/fastdfs")
 public class FastDFSController {
     /**
@@ -31,7 +30,6 @@ public class FastDFSController {
      * @return
      */
     @RequestMapping("/upload")
-    @ResponseBody
     public MessageResult singleFileUpload(@RequestParam("file") MultipartFile file) {
         Map<String, Object> map = new HashMap<>(16);
         map.put("output", "json");
@@ -40,7 +38,7 @@ public class FastDFSController {
         map.put("file", getFile(file));
 
         String post = HttpUtil.post(ConstantProperties.URL, map);
-        System.out.println(post);
+
         GoFast goFast = JSONUtil.toBean(post, GoFast.class);
 
         return MessageResult.ok(goFast);
