@@ -23,6 +23,8 @@ Spring Boot 2.0 包括一个新的 spring-webflux 模块。该模块包含对响
 
 Spring Boot Webflux 有两种编程模型实现，一种类似 Spring MVC 注解方式，另一种是基于 Reactor 的响应式方式。
 
+这个代码是很简单的hello，更多内容请看其他例程。
+
 ### 问题建议
 
 - 联系我的邮箱：ilovey_hwy@163.com
