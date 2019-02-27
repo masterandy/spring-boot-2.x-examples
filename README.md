@@ -118,6 +118,9 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-xml](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-xml)：使用xml配置代替配置文件
 
+* [spring-boot-emoji](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-emoji)：emoji表情
+
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
