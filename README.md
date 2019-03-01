@@ -44,6 +44,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-freemarker](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-freemarker)：FreeMarker模板引擎
 
+* [spring-boot-beetl](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-beetl)：beetl模板引擎
+
 * [spring-boot-exception](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-exception)：自定的统一异常处理
 
 * [spring-boot-mongodb](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mongodb)：MongoDB是一个基于分布式文件存储的数据库
