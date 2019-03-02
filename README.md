@@ -98,6 +98,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-memcached](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-memcached)：Memcached 是一个高性能的分布式内存对象缓存系统，实现了它的基本操作
 
+* [spring-boot-ehcach](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-ehcach)：EhCache 是一个纯Java的进程内缓存框架
+
 * [spring-boot-war](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-war) ：把Spring Boot项目打成war发布（默认是jar包）
 
 * [spring-boot-scheduled](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-scheduled)：scheduled是Spring Boot自带的小型定时任务
