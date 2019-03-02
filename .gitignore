@@ -113,3 +113,4 @@ spring-boot-webflux/mvnw.cmd
 spring-boot-webflux/mvnw
 spring-boot-emoji/.mvn/
 spring-boot-beetl/.mvn/
+spring-boot-ehcach/.mvn/
