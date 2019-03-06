@@ -6,8 +6,9 @@ import com.yi.beatlsql.service.BaikeService;
 import org.beetl.sql.core.SQLManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
-import javax.annotation.Resource;
 import java.util.List;
 
 /**
@@ -15,9 +16,10 @@ import java.util.List;
  * @author YI
  * @date 2019-3-5 22:10:33
  */
+@Transactional(propagation = Propagation.REQUIRED,rollbackFor={Exception.class, RuntimeException.class})
 @Service
 public class BaikeServiceImpl implements BaikeService {
-    @Resource
+    @Autowired
     BaikeDao baikeDao;
     @Autowired
     SQLManager sqlManager;
@@ -29,7 +31,7 @@ public class BaikeServiceImpl implements BaikeService {
 
     @Override
     public void save(Baike baike) {
-        baikeDao.insert(baike);
+        baikeDao.insertTemplate(baike);
     }
 
     @Override
