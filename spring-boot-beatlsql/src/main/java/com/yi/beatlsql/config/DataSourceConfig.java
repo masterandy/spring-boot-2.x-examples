@@ -17,7 +17,7 @@ import javax.sql.DataSource;
 public class DataSourceConfig {
 
     @Bean(name = "datasource")
-    public DataSource getDataSource(Environment env) {
+    public DataSource dataSource(Environment env) {
         HikariDataSource ds = new HikariDataSource();
 
         ds.setJdbcUrl(env.getProperty("spring.datasource.url"));
@@ -25,6 +25,6 @@ public class DataSourceConfig {
         ds.setPassword(env.getProperty("spring.datasource.password"));
         ds.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
 
-        return new HikariDataSource();
+        return ds;
     }
 }
