@@ -128,6 +128,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-contiperf](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-contiperf)：轻量级的单元测试工具
 
+* [spring-boot-https](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-https)：配置跳转https
+
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
