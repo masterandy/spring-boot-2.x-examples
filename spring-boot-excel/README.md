@@ -52,7 +52,7 @@ public class IndexController {
 }
 
 ```
-
+![](https://i.imgur.com/ZprA2x0.png)
 是不是超级简单就能得到一个excel表格，下面是图示是下载后的excel文件
 ![](https://i.imgur.com/bOaAvN7.png)
 
