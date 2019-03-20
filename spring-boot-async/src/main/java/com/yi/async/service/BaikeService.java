@@ -10,5 +10,5 @@ public interface BaikeService {
      * @param baike 百科信息
      * @return
      */
-    Future<Integer> save(Baike baike);
+    Future<String> save(Baike baike);
 }

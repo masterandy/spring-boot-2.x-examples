@@ -31,10 +31,9 @@ public class BaikeServiceImpl implements BaikeService {
 
     @Async
     @Override
-    public Future<Integer> save(Baike baike) {
+    public Future<String> save(Baike baike) {
         int i = baikeDAO.insertSelective(baike);
 
-        System.out.println("哈哈哈哈哈哈哈哈哈哈");
-        return new AsyncResult<>(i);
+        return new AsyncResult<>("插入行数:" + i);
     }
 }
