@@ -21,18 +21,22 @@
 </div>
 
 <div class="leftright">
+    <#--表单-->
+    <table class="layui-hide" lay-size="sm" id="scriptTable"></table>
 
     <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
-        <legend>下载excel</legend>
+        <legend>Excel操作</legend>
     </fieldset>
 
     <div class="layui-upload">
         <div class="center-button">
-            <a href="/download" class="layui-btn" target="_blank">下载excel文件</a>
+            <a href="/excle/download" class="layui-btn layui-btn-normal" target="_blank">下载excel文件</a>
+            <button type="button" class="layui-btn" lay-submit="" lay-filter="readerExcel">
+                <i class="layui-icon">&#xe60a;</i>读取excel展示</button>
         </div>
     </div>
 
     <script src="/lib/layui/layui.js" charset="utf-8"></script>
-    <script src="/js/fastdfs.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 </html>
