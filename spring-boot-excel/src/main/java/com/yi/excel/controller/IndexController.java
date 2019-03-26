@@ -1,13 +1,18 @@
 package com.yi.excel.controller;
 
 import com.yi.excel.model.Book;
+import com.yi.excel.model.Sample;
+import com.yi.excel.utils.MessageResult;
+import io.github.biezhi.excel.plus.Reader;
 import io.github.biezhi.excel.plus.Writer;
 import io.github.biezhi.excel.plus.exception.WriterException;
 import io.github.biezhi.excel.plus.writer.ResponseWrapper;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +24,7 @@ import java.util.List;
  * @date 2019-3-16 10:21:30
  */
 @Controller
+@RequestMapping("/excle")
 public class IndexController {
 
     /**
@@ -47,5 +53,22 @@ public class IndexController {
                 .withRows(books)
                 .headerTitle("书籍列表 V1")
                 .to(ResponseWrapper.create(servletResponse ,"book.xlsx"));
+    }
+
+    /**
+     * 读取excel展示
+     * @return excel数据
+     */
+    @RequestMapping("/show")
+    @ResponseBody
+    public MessageResult show() {
+        String path = IndexController.class.getResource("/").getPath();
+        List<Sample> samples = Reader.create(Sample.class)
+                .from(new File(path + "/SampleData.xlsx"))
+                .sheet("SalesOrders")
+                .start(1)
+                .asList();
+
+        return MessageResult.ok(samples);
     }
 }
