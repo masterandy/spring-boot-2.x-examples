@@ -6,87 +6,30 @@ import com.yi.sqlite.model.BaikeExample;
 import java.util.List;
 
 /**
- * 操作数据接口
+ * 接口实现
+ *
  * @author YI
- * @date 2018-8-22 17:48:27
+ * @date 2019-3-26 21:56:25
  */
 public interface BaikeService {
     /**
-     * 根据条件统计
-     * @param example
+     * 保存数据
+     * @param baike 百科信息
      * @return
      */
-    long countByExample(BaikeExample example);
+    int saveSelective(Baike baike);
 
     /**
-     * 根据条件删除
-     * @param example
-     * @return
-     */
-    int deleteByExample(BaikeExample example);
-
-    /**
-     * 根据id删除
-     * @param id
-     * @return
-     */
-    int deleteByPrimaryKey(Long id);
-
-    /**
-     * 插入数据，包括null
-     * @param record
-     * @return
-     */
-    int insert(Baike record);
-
-    /**
-     * 插入数据，不包括null
-     * @param record
-     * @return
-     */
-    int insertSelective(Baike record);
-
-    /**
-     * 条件查询
-     * @param example
+     * 根据条件查找
+     * @param example 条件构建
      * @return
      */
     List<Baike> selectByExample(BaikeExample example);
 
     /**
      * 根据id查找
-     * @param id
+     * @param id id
      * @return
      */
-    Baike selectByPrimaryKey(Long id);
-
-    /**
-     * 根据条件更新数据，不包括null
-     * @param record    数据
-     * @param example   条件
-     * @return
-     */
-    int updateByExampleSelective(Baike record, BaikeExample example);
-
-    /**
-     * 根据条件更新数据，包括null
-     * @param record    数据
-     * @param example   条件
-     * @return
-     */
-    int updateByExample(Baike record, BaikeExample example);
-
-    /**
-     * 根据bean更新数据，不包括null，bean里面必须有主键
-     * @param record
-     * @return
-     */
-    int updateByPrimaryKeySelective(Baike record);
-
-    /**
-     * 根据bean更新数据，包括null，bean里面必须有主键
-     * @param record
-     * @return
-     */
-    int updateByPrimaryKey(Baike record);
+    Baike selectByPrimaryKey(Integer id);
 }

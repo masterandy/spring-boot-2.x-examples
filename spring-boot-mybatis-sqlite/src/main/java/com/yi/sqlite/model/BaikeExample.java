@@ -1,24 +1,14 @@
 package com.yi.sqlite.model;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
-/**
- * 条件查询Example，用于拼接查询条件
- * @author YI
- * @date 2018-8-22 18:27:58
- */
 public class BaikeExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
-
-    private Integer limit;
-
-    private Integer offset;
 
     public BaikeExample() {
         oredCriteria = new ArrayList<Criteria>();
@@ -73,22 +63,6 @@ public class BaikeExample {
         distinct = false;
     }
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
-    }
-
-    public Integer getLimit() {
-        return limit;
-    }
-
-    public void setOffset(Integer offset) {
-        this.offset = offset;
-    }
-
-    public Integer getOffset() {
-        return offset;
-    }
-
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
@@ -140,52 +114,52 @@ public class BaikeExample {
             return (Criteria) this;
         }
 
-        public Criteria andIdEqualTo(Long value) {
+        public Criteria andIdEqualTo(Integer value) {
             addCriterion("id =", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotEqualTo(Long value) {
+        public Criteria andIdNotEqualTo(Integer value) {
             addCriterion("id <>", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdGreaterThan(Long value) {
+        public Criteria andIdGreaterThan(Integer value) {
             addCriterion("id >", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdGreaterThanOrEqualTo(Long value) {
+        public Criteria andIdGreaterThanOrEqualTo(Integer value) {
             addCriterion("id >=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdLessThan(Long value) {
+        public Criteria andIdLessThan(Integer value) {
             addCriterion("id <", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdLessThanOrEqualTo(Long value) {
+        public Criteria andIdLessThanOrEqualTo(Integer value) {
             addCriterion("id <=", value, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdIn(List<Long> values) {
+        public Criteria andIdIn(List<Integer> values) {
             addCriterion("id in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotIn(List<Long> values) {
+        public Criteria andIdNotIn(List<Integer> values) {
             addCriterion("id not in", values, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdBetween(Long value1, Long value2) {
+        public Criteria andIdBetween(Integer value1, Integer value2) {
             addCriterion("id between", value1, value2, "id");
             return (Criteria) this;
         }
 
-        public Criteria andIdNotBetween(Long value1, Long value2) {
+        public Criteria andIdNotBetween(Integer value1, Integer value2) {
             addCriterion("id not between", value1, value2, "id");
             return (Criteria) this;
         }
@@ -451,72 +425,72 @@ public class BaikeExample {
         }
 
         public Criteria andNameIsNull() {
-            addCriterion("name is null");
+            addCriterion("\"name\" is null");
             return (Criteria) this;
         }
 
         public Criteria andNameIsNotNull() {
-            addCriterion("name is not null");
+            addCriterion("\"name\" is not null");
             return (Criteria) this;
         }
 
         public Criteria andNameEqualTo(String value) {
-            addCriterion("name =", value, "name");
+            addCriterion("\"name\" =", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameNotEqualTo(String value) {
-            addCriterion("name <>", value, "name");
+            addCriterion("\"name\" <>", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameGreaterThan(String value) {
-            addCriterion("name >", value, "name");
+            addCriterion("\"name\" >", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameGreaterThanOrEqualTo(String value) {
-            addCriterion("name >=", value, "name");
+            addCriterion("\"name\" >=", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameLessThan(String value) {
-            addCriterion("name <", value, "name");
+            addCriterion("\"name\" <", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameLessThanOrEqualTo(String value) {
-            addCriterion("name <=", value, "name");
+            addCriterion("\"name\" <=", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameLike(String value) {
-            addCriterion("name like", value, "name");
+            addCriterion("\"name\" like", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameNotLike(String value) {
-            addCriterion("name not like", value, "name");
+            addCriterion("\"name\" not like", value, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameIn(List<String> values) {
-            addCriterion("name in", values, "name");
+            addCriterion("\"name\" in", values, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameNotIn(List<String> values) {
-            addCriterion("name not in", values, "name");
+            addCriterion("\"name\" not in", values, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameBetween(String value1, String value2) {
-            addCriterion("name between", value1, value2, "name");
+            addCriterion("\"name\" between", value1, value2, "name");
             return (Criteria) this;
         }
 
         public Criteria andNameNotBetween(String value1, String value2) {
-            addCriterion("name not between", value1, value2, "name");
+            addCriterion("\"name\" not between", value1, value2, "name");
             return (Criteria) this;
         }
 
@@ -651,62 +625,62 @@ public class BaikeExample {
         }
 
         public Criteria andStatusIsNull() {
-            addCriterion("status is null");
+            addCriterion("\"status\" is null");
             return (Criteria) this;
         }
 
         public Criteria andStatusIsNotNull() {
-            addCriterion("status is not null");
+            addCriterion("\"status\" is not null");
             return (Criteria) this;
         }
 
-        public Criteria andStatusEqualTo(Byte value) {
-            addCriterion("status =", value, "status");
+        public Criteria andStatusEqualTo(Integer value) {
+            addCriterion("\"status\" =", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotEqualTo(Byte value) {
-            addCriterion("status <>", value, "status");
+        public Criteria andStatusNotEqualTo(Integer value) {
+            addCriterion("\"status\" <>", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThan(Byte value) {
-            addCriterion("status >", value, "status");
+        public Criteria andStatusGreaterThan(Integer value) {
+            addCriterion("\"status\" >", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusGreaterThanOrEqualTo(Byte value) {
-            addCriterion("status >=", value, "status");
+        public Criteria andStatusGreaterThanOrEqualTo(Integer value) {
+            addCriterion("\"status\" >=", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThan(Byte value) {
-            addCriterion("status <", value, "status");
+        public Criteria andStatusLessThan(Integer value) {
+            addCriterion("\"status\" <", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusLessThanOrEqualTo(Byte value) {
-            addCriterion("status <=", value, "status");
+        public Criteria andStatusLessThanOrEqualTo(Integer value) {
+            addCriterion("\"status\" <=", value, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusIn(List<Byte> values) {
-            addCriterion("status in", values, "status");
+        public Criteria andStatusIn(List<Integer> values) {
+            addCriterion("\"status\" in", values, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotIn(List<Byte> values) {
-            addCriterion("status not in", values, "status");
+        public Criteria andStatusNotIn(List<Integer> values) {
+            addCriterion("\"status\" not in", values, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusBetween(Byte value1, Byte value2) {
-            addCriterion("status between", value1, value2, "status");
+        public Criteria andStatusBetween(Integer value1, Integer value2) {
+            addCriterion("\"status\" between", value1, value2, "status");
             return (Criteria) this;
         }
 
-        public Criteria andStatusNotBetween(Byte value1, Byte value2) {
-            addCriterion("status not between", value1, value2, "status");
+        public Criteria andStatusNotBetween(Integer value1, Integer value2) {
+            addCriterion("\"status\" not between", value1, value2, "status");
             return (Criteria) this;
         }
 
@@ -720,52 +694,62 @@ public class BaikeExample {
             return (Criteria) this;
         }
 
-        public Criteria andCratedateEqualTo(Date value) {
+        public Criteria andCratedateEqualTo(String value) {
             addCriterion("crateDate =", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateNotEqualTo(Date value) {
+        public Criteria andCratedateNotEqualTo(String value) {
             addCriterion("crateDate <>", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateGreaterThan(Date value) {
+        public Criteria andCratedateGreaterThan(String value) {
             addCriterion("crateDate >", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateGreaterThanOrEqualTo(Date value) {
+        public Criteria andCratedateGreaterThanOrEqualTo(String value) {
             addCriterion("crateDate >=", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateLessThan(Date value) {
+        public Criteria andCratedateLessThan(String value) {
             addCriterion("crateDate <", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateLessThanOrEqualTo(Date value) {
+        public Criteria andCratedateLessThanOrEqualTo(String value) {
             addCriterion("crateDate <=", value, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateIn(List<Date> values) {
+        public Criteria andCratedateLike(String value) {
+            addCriterion("crateDate like", value, "cratedate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCratedateNotLike(String value) {
+            addCriterion("crateDate not like", value, "cratedate");
+            return (Criteria) this;
+        }
+
+        public Criteria andCratedateIn(List<String> values) {
             addCriterion("crateDate in", values, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateNotIn(List<Date> values) {
+        public Criteria andCratedateNotIn(List<String> values) {
             addCriterion("crateDate not in", values, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateBetween(Date value1, Date value2) {
+        public Criteria andCratedateBetween(String value1, String value2) {
             addCriterion("crateDate between", value1, value2, "cratedate");
             return (Criteria) this;
         }
 
-        public Criteria andCratedateNotBetween(Date value1, Date value2) {
+        public Criteria andCratedateNotBetween(String value1, String value2) {
             addCriterion("crateDate not between", value1, value2, "cratedate");
             return (Criteria) this;
         }
@@ -780,52 +764,62 @@ public class BaikeExample {
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateEqualTo(Date value) {
+        public Criteria andUpdatedateEqualTo(String value) {
             addCriterion("updateDate =", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateNotEqualTo(Date value) {
+        public Criteria andUpdatedateNotEqualTo(String value) {
             addCriterion("updateDate <>", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateGreaterThan(Date value) {
+        public Criteria andUpdatedateGreaterThan(String value) {
             addCriterion("updateDate >", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateGreaterThanOrEqualTo(Date value) {
+        public Criteria andUpdatedateGreaterThanOrEqualTo(String value) {
             addCriterion("updateDate >=", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateLessThan(Date value) {
+        public Criteria andUpdatedateLessThan(String value) {
             addCriterion("updateDate <", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateLessThanOrEqualTo(Date value) {
+        public Criteria andUpdatedateLessThanOrEqualTo(String value) {
             addCriterion("updateDate <=", value, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateIn(List<Date> values) {
+        public Criteria andUpdatedateLike(String value) {
+            addCriterion("updateDate like", value, "updatedate");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatedateNotLike(String value) {
+            addCriterion("updateDate not like", value, "updatedate");
+            return (Criteria) this;
+        }
+
+        public Criteria andUpdatedateIn(List<String> values) {
             addCriterion("updateDate in", values, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateNotIn(List<Date> values) {
+        public Criteria andUpdatedateNotIn(List<String> values) {
             addCriterion("updateDate not in", values, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateBetween(Date value1, Date value2) {
+        public Criteria andUpdatedateBetween(String value1, String value2) {
             addCriterion("updateDate between", value1, value2, "updatedate");
             return (Criteria) this;
         }
 
-        public Criteria andUpdatedateNotBetween(Date value1, Date value2) {
+        public Criteria andUpdatedateNotBetween(String value1, String value2) {
             addCriterion("updateDate not between", value1, value2, "updatedate");
             return (Criteria) this;
         }

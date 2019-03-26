@@ -1,77 +1,36 @@
 package com.yi.sqlite.service.impl;
 
-import com.yi.sqlite.dao.BaikeMapper;
+import com.yi.sqlite.dao.BaikeDAO;
 import com.yi.sqlite.model.Baike;
 import com.yi.sqlite.model.BaikeExample;
 import com.yi.sqlite.service.BaikeService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
- * 操作数据业务
+ * 接口实现
+ *
  * @author YI
- * @date 2018-8-22 17:56:55
+ * @date 2019-3-26 21:56:25
  */
 @Service
 public class BaikeServiceImpl implements BaikeService {
-    @Autowired
-    BaikeMapper baikeMapper;
-
-
+    @Resource
+    BaikeDAO baikeDAO;
     @Override
-    public long countByExample(BaikeExample example) {
-        return baikeMapper.countByExample(example);
-    }
-
-    @Override
-    public int deleteByExample(BaikeExample example) {
-        return baikeMapper.deleteByExample(example);
-    }
-
-    @Override
-    public int deleteByPrimaryKey(Long id) {
-        return baikeMapper.deleteByPrimaryKey(id);
-    }
-
-    @Override
-    public int insert(Baike record) {
-        return baikeMapper.insert(record);
-    }
-
-    @Override
-    public int insertSelective(Baike record) {
-        return baikeMapper.insertSelective(record);
+    public int saveSelective(Baike baike) {
+        return baikeDAO.insertSelective(baike);
     }
 
     @Override
     public List<Baike> selectByExample(BaikeExample example) {
-        return baikeMapper.selectByExample(example);
+        return baikeDAO.selectByExample(example);
     }
 
     @Override
-    public Baike selectByPrimaryKey(Long id) {
-        return baikeMapper.selectByPrimaryKey(id);
-    }
-
-    @Override
-    public int updateByExampleSelective(Baike record, BaikeExample example) {
-        return baikeMapper.updateByExampleSelective(record, example);
-    }
-
-    @Override
-    public int updateByExample(Baike record, BaikeExample example) {
-        return baikeMapper.updateByExample(record, example);
-    }
-
-    @Override
-    public int updateByPrimaryKeySelective(Baike record) {
-        return baikeMapper.updateByPrimaryKeySelective(record);
-    }
-
-    @Override
-    public int updateByPrimaryKey(Baike record) {
-        return baikeMapper.updateByPrimaryKey(record);
+    public Baike selectByPrimaryKey(Integer id) {
+        return baikeDAO.selectByPrimaryKey(id);
     }
 }

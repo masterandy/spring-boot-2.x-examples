@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.yi.sqlite.dao.BaikeMapper">
+<mapper namespace="com.yi.sqlite.dao.BaikeDAO">
   <resultMap id="BaseResultMap" type="com.yi.sqlite.model.Baike">
-    <id column="id" jdbcType="BIGINT" property="id" />
+    <id column="id" jdbcType="INTEGER" property="id" />
     <result column="book" jdbcType="VARCHAR" property="book" />
     <result column="tag" jdbcType="VARCHAR" property="tag" />
     <result column="good" jdbcType="INTEGER" property="good" />
@@ -10,9 +10,9 @@
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="gender" jdbcType="VARCHAR" property="gender" />
     <result column="goldCoin" jdbcType="INTEGER" property="goldcoin" />
-    <result column="status" jdbcType="TINYINT" property="status" />
-    <result column="crateDate" jdbcType="TIMESTAMP" property="cratedate" />
-    <result column="updateDate" jdbcType="TIMESTAMP" property="updatedate" />
+    <result column="status" jdbcType="INTEGER" property="status" />
+    <result column="crateDate" jdbcType="VARCHAR" property="cratedate" />
+    <result column="updateDate" jdbcType="VARCHAR" property="updatedate" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -73,7 +73,7 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    id, book, tag, good, bad, name, gender, goldCoin, status, crateDate, updateDate
+    id, book, tag, good, bad, "name", gender, goldCoin, "status", crateDate, updateDate
   </sql>
   <select id="selectByExample" parameterType="com.yi.sqlite.model.BaikeExample" resultMap="BaseResultMap">
     select
@@ -88,24 +88,16 @@
     <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
-    <if test="limit != null">
-      <if test="offset != null">
-        limit ${offset}, ${limit}
-      </if>
-      <if test="offset == null">
-        limit ${limit}
-      </if>
-    </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Long" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from baike
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from baike
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <delete id="deleteByExample" parameterType="com.yi.sqlite.model.BaikeExample">
     delete from baike
@@ -115,13 +107,13 @@
   </delete>
   <insert id="insert" parameterType="com.yi.sqlite.model.Baike">
     insert into baike (id, book, tag, 
-      good, bad, name, gender, 
-      goldCoin, status, crateDate, 
+      good, bad, "name", gender, 
+      goldCoin, "status", crateDate, 
       updateDate)
-    values (#{id,jdbcType=BIGINT}, #{book,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
+    values (#{id,jdbcType=INTEGER}, #{book,jdbcType=VARCHAR}, #{tag,jdbcType=VARCHAR}, 
       #{good,jdbcType=INTEGER}, #{bad,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{gender,jdbcType=VARCHAR}, 
-      #{goldcoin,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, #{cratedate,jdbcType=TIMESTAMP}, 
-      #{updatedate,jdbcType=TIMESTAMP})
+      #{goldcoin,jdbcType=INTEGER}, #{status,jdbcType=INTEGER}, #{cratedate,jdbcType=VARCHAR}, 
+      #{updatedate,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.yi.sqlite.model.Baike">
     insert into baike
@@ -142,7 +134,7 @@
         bad,
       </if>
       <if test="name != null">
-        name,
+        "name",
       </if>
       <if test="gender != null">
         gender,
@@ -151,7 +143,7 @@
         goldCoin,
       </if>
       <if test="status != null">
-        status,
+        "status",
       </if>
       <if test="cratedate != null">
         crateDate,
@@ -162,7 +154,7 @@
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
       <if test="id != null">
-        #{id,jdbcType=BIGINT},
+        #{id,jdbcType=INTEGER},
       </if>
       <if test="book != null">
         #{book,jdbcType=VARCHAR},
@@ -186,13 +178,13 @@
         #{goldcoin,jdbcType=INTEGER},
       </if>
       <if test="status != null">
-        #{status,jdbcType=TINYINT},
+        #{status,jdbcType=INTEGER},
       </if>
       <if test="cratedate != null">
-        #{cratedate,jdbcType=TIMESTAMP},
+        #{cratedate,jdbcType=VARCHAR},
       </if>
       <if test="updatedate != null">
-        #{updatedate,jdbcType=TIMESTAMP},
+        #{updatedate,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
@@ -206,7 +198,7 @@
     update baike
     <set>
       <if test="record.id != null">
-        id = #{record.id,jdbcType=BIGINT},
+        id = #{record.id,jdbcType=INTEGER},
       </if>
       <if test="record.book != null">
         book = #{record.book,jdbcType=VARCHAR},
@@ -221,7 +213,7 @@
         bad = #{record.bad,jdbcType=INTEGER},
       </if>
       <if test="record.name != null">
-        name = #{record.name,jdbcType=VARCHAR},
+        "name" = #{record.name,jdbcType=VARCHAR},
       </if>
       <if test="record.gender != null">
         gender = #{record.gender,jdbcType=VARCHAR},
@@ -230,13 +222,13 @@
         goldCoin = #{record.goldcoin,jdbcType=INTEGER},
       </if>
       <if test="record.status != null">
-        status = #{record.status,jdbcType=TINYINT},
+        "status" = #{record.status,jdbcType=INTEGER},
       </if>
       <if test="record.cratedate != null">
-        crateDate = #{record.cratedate,jdbcType=TIMESTAMP},
+        crateDate = #{record.cratedate,jdbcType=VARCHAR},
       </if>
       <if test="record.updatedate != null">
-        updateDate = #{record.updatedate,jdbcType=TIMESTAMP},
+        updateDate = #{record.updatedate,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -245,17 +237,17 @@
   </update>
   <update id="updateByExample" parameterType="map">
     update baike
-    set id = #{record.id,jdbcType=BIGINT},
+    set id = #{record.id,jdbcType=INTEGER},
       book = #{record.book,jdbcType=VARCHAR},
       tag = #{record.tag,jdbcType=VARCHAR},
       good = #{record.good,jdbcType=INTEGER},
       bad = #{record.bad,jdbcType=INTEGER},
-      name = #{record.name,jdbcType=VARCHAR},
+      "name" = #{record.name,jdbcType=VARCHAR},
       gender = #{record.gender,jdbcType=VARCHAR},
       goldCoin = #{record.goldcoin,jdbcType=INTEGER},
-      status = #{record.status,jdbcType=TINYINT},
-      crateDate = #{record.cratedate,jdbcType=TIMESTAMP},
-      updateDate = #{record.updatedate,jdbcType=TIMESTAMP}
+      "status" = #{record.status,jdbcType=INTEGER},
+      crateDate = #{record.cratedate,jdbcType=VARCHAR},
+      updateDate = #{record.updatedate,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -276,7 +268,7 @@
         bad = #{bad,jdbcType=INTEGER},
       </if>
       <if test="name != null">
-        name = #{name,jdbcType=VARCHAR},
+        "name" = #{name,jdbcType=VARCHAR},
       </if>
       <if test="gender != null">
         gender = #{gender,jdbcType=VARCHAR},
@@ -285,16 +277,16 @@
         goldCoin = #{goldcoin,jdbcType=INTEGER},
       </if>
       <if test="status != null">
-        status = #{status,jdbcType=TINYINT},
+        "status" = #{status,jdbcType=INTEGER},
       </if>
       <if test="cratedate != null">
-        crateDate = #{cratedate,jdbcType=TIMESTAMP},
+        crateDate = #{cratedate,jdbcType=VARCHAR},
       </if>
       <if test="updatedate != null">
-        updateDate = #{updatedate,jdbcType=TIMESTAMP},
+        updateDate = #{updatedate,jdbcType=VARCHAR},
       </if>
     </set>
-    where id = #{id,jdbcType=BIGINT}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.yi.sqlite.model.Baike">
     update baike
@@ -302,12 +294,12 @@
       tag = #{tag,jdbcType=VARCHAR},
       good = #{good,jdbcType=INTEGER},
       bad = #{bad,jdbcType=INTEGER},
-      name = #{name,jdbcType=VARCHAR},
+      "name" = #{name,jdbcType=VARCHAR},
       gender = #{gender,jdbcType=VARCHAR},
       goldCoin = #{goldcoin,jdbcType=INTEGER},
-      status = #{status,jdbcType=TINYINT},
-      crateDate = #{cratedate,jdbcType=TIMESTAMP},
-      updateDate = #{updatedate,jdbcType=TIMESTAMP}
-    where id = #{id,jdbcType=BIGINT}
+      "status" = #{status,jdbcType=INTEGER},
+      crateDate = #{cratedate,jdbcType=VARCHAR},
+      updateDate = #{updatedate,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
   </update>
 </mapper>

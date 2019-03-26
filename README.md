@@ -60,6 +60,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-current-mapper](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-current-mapper)：通用mapper，基于mybatis，极大的方便操作数据库，甚至可以自定义动态生成SQL
 
+* [spring-boot-mybatis-sqlite](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-sqlite)：通过mybatis操作sqlite数据库
+
 * [spring-boot-anima](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-anima)：通用数据库操作框架，支持MySQL、SQLite、H2、Oracle、SqlServer等数据库
 
 * [spring-boot-beatlsql](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-beatlsql)：BeetSql是一个全功能DAO工具,目前跨数据库支持mysql,postgres,oracle,sqlserver,h2,sqllite,DB2
@@ -83,8 +85,6 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 * [spring-boot-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-log)：log彩色日志系统，可以打印漂亮的彩色日志
 
 * [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
-
-* [spring-boot-mybatis-sqlite](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mybatis-sqlite)：通过mybatis操作sqlite数据库
 
 * [spring-boot-redis](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-redis)：Redis是一个可基于内存亦可持久化的日志型、Key-Value数据库
 
