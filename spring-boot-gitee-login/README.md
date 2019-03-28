@@ -120,7 +120,7 @@ public class GiteeController {
 
 随后访问我们的 http://localhost:8080
 
-![](https://i.imgur.com/MSzxFxl.png)
+![](https://i.imgur.com/ChJYSQn.png)
 我们点击授权，弹出授权窗口，我们点击授权之后会回调我们之前创建应用填写的地址
 ![](https://i.imgur.com/n3lIJzI.png)
 
