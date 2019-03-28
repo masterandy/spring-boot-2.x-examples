@@ -138,6 +138,8 @@ Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
 
 * [spring-boot-sm](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-sm)：SM免费图床
 
+* [spring-boot-gitee-login](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-gitee-login)：通过gitee(码云)授权登录我们的应用
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
