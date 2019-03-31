@@ -1,5 +1,5 @@
 # spring-boot-2.x-examples
-Spring Boot 2.x code examples 编写2.0版本以后的各种示例代码
+Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 ### 说明
 统一基础运行环境：
