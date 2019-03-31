@@ -122,3 +122,6 @@ spring-boot-excel/.mvn/
 spring-boot-auto-code/.mvn/
 spring-boot-async/.mvn/
 spring-boot-sm/.mvn/
+spring-boot-gitee-login/mvnw.cmd
+spring-boot-gitee-login/mvnw
+spring-boot-gitee-login/.mvn/
