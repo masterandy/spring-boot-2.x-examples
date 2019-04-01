@@ -59,5 +59,5 @@ public class BaikeServiceImpl implements BaikeService {
 ### 问题建议
 
 - 联系我的邮箱：ilovey_hwy@163.com
-- 我的博客：http://www.hwy.ac.cn
+- 我的博客：https://www.hwy.ac.cn
 - GitHub：https://github.com/HWYWL
