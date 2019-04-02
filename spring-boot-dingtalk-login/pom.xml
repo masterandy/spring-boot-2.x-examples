@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yi</groupId>
-    <artifactId>spring-boot-github-login</artifactId>
+    <artifactId>spring-boot-dingtalk-login</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-github-login</name>
-    <description>Demo project for Spring Boot</description>
+    <name>spring-boot-dingtalk-login</name>
+    <description>钉钉 project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
