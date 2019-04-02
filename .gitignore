@@ -125,3 +125,7 @@ spring-boot-sm/.mvn/
 spring-boot-gitee-login/mvnw.cmd
 spring-boot-gitee-login/mvnw
 spring-boot-gitee-login/.mvn/
+spring-boot-github-login/.mvn/
+spring-boot-github-login/mvnw.cmd
+spring-boot-github-login/mvnw
+spring-boot-github-login/.gitignore
