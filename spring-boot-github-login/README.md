@@ -120,7 +120,7 @@ public class GitHubController {
 随后访问我们的 http://localhost:8080
 ![](https://i.imgur.com/UQuLmeE.png)
 我们点击授权，弹出授权窗口
-![](https://i.imgur.com/voj4ZZa.png)
+![](https://i.imgur.com/xgEVNPi.png)
 我们点击授权之后会回调我们之前创建应用填写的回调地址
 ![](https://i.imgur.com/31ncgmq.png)
 
