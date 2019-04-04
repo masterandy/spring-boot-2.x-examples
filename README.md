@@ -146,6 +146,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-weibo-login](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-weibo-login)：通过新浪微博授权登录我们的应用
 
+* [spring-boot-tencentcloud](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-tencentcloud)：通过腾讯云授权登录我们的应用
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
