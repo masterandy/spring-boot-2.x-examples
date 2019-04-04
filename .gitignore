@@ -136,3 +136,6 @@ spring-boot-dingtalk-login/.gitignore
 spring-boot-weibo-login/mvnw.cmd
 spring-boot-weibo-login/mvnw
 spring-boot-weibo-login/.mvn/
+spring-boot-tencentcloud/.mvn/
+spring-boot-tencentcloud/mvnw.cmd
+spring-boot-tencentcloud/mvnw
