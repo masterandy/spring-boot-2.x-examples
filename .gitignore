@@ -139,3 +139,7 @@ spring-boot-weibo-login/.mvn/
 spring-boot-tencentcloud/.mvn/
 spring-boot-tencentcloud/mvnw.cmd
 spring-boot-tencentcloud/mvnw
+spring-boot-csdn-login/.mvn/
+spring-boot-csdn-login/mvnw
+spring-boot-csdn-login/.gitignore
+spring-boot-csdn-login/mvnw.cmd
