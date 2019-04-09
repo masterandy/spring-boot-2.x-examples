@@ -1,6 +1,8 @@
 # spring-boot-2.x-examples
 Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
+
 ### 说明
 统一基础运行环境：
 * JDK：1.8.0_111
