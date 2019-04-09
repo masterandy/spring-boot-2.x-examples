@@ -143,3 +143,7 @@ spring-boot-csdn-login/.mvn/
 spring-boot-csdn-login/mvnw
 spring-boot-csdn-login/.gitignore
 spring-boot-csdn-login/mvnw.cmd
+spring-boot-oschina-login/.mvn/
+spring-boot-oschina-login/mvnw.cmd
+spring-boot-oschina-login/mvnw
+spring-boot-oschina-login/.gitignore
