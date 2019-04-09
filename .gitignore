@@ -147,3 +147,7 @@ spring-boot-oschina-login/.mvn/
 spring-boot-oschina-login/mvnw.cmd
 spring-boot-oschina-login/mvnw
 spring-boot-oschina-login/.gitignore
+spring-boot-auto-code-ui/.mvn/
+spring-boot-auto-code-ui/mvnw.cmd
+spring-boot-auto-code-ui/mvnw
+spring-boot-auto-code-ui/.gitignore
