@@ -15,6 +15,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 import javax.sql.DataSource;
 
+/**
+ * Swagger2 接口文档
+ *
+ * @author YI
+ * @date 2019-4-9 16:34:37
+ */
 @Configuration
 @EnableConfigurationProperties(value = AutoCodeProperties.class)
 @ConditionalOnClass(DataSource.class)
@@ -32,13 +38,16 @@ public class Swagger2Configuration {
     }
 
 
-    //构建 api文档的详细信息函数,注意这里的注解引用的是哪个
+    /**
+     * 构建 api文档的详细信息函数,注意这里的注解引用的是哪个
+     * @return
+     */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 //页面标题
                 .title("auto-code接口(swagger 目前有BUG,参数如果是实体类,设置忽略该参数不起作用.所以请忽略下面 (*.*) 带点的参数,这些参数不会被使用)")
                 //创建人
-                .contact(new Contact("ztp", "https://gitee.com/ztp/auto-code", "744489075@qq.com"))
+                .contact(new Contact("YI", "https://gitee.com/ztp/auto-code", "744489075@qq.com"))
                 //版本号
                 .version("1.0")
                 //描述

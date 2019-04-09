@@ -19,6 +19,9 @@ import javax.sql.DataSource;
 
 /**
  * autoCode配置
+ *
+ * @author YI
+ * @date 2019-4-9 16:34:47
  */
 @Configuration
 @EnableConfigurationProperties(value = AutoCodeProperties.class)
@@ -57,9 +60,9 @@ public class AutoCodeConfiguration {
     }
 
     @Bean
-    public ServletRegistrationBean servletRegistrationBean() {
+    public ServletRegistrationBean<AutoCodeUiServlet> servletRegistrationBean() {
         AutoCodeUiServlet autoCodeUiServlet = new AutoCodeUiServlet();
-        return  new ServletRegistrationBean(autoCodeUiServlet,"/auto-code-ui/ui/*","/auto-code-ui/static/*");
+        return  new ServletRegistrationBean<>(autoCodeUiServlet,"/auto-code-ui/ui/*","/auto-code-ui/static/*");
 
     }
 

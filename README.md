@@ -136,6 +136,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-auto-code](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-auto-code)：强大的代码生成器，极少的配置可生成 单表、一对一、一对多、多对多代码，支持无限级联
 
+* [spring-boot-auto-code-ui](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-auto-code-ui)：强大的代码生成器,通过界面可生成 单表、一对一、一对多、多对多代码，支持无限级联
+
 * [spring-boot-async](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-async)：异步执行我们的接口
 
 * [spring-boot-sm](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-sm)：SM免费图床
