@@ -65,7 +65,6 @@ public class GiteeController {
                 .clientId("1049e8dbca6b16b99f289ace91f51b69d4197cf1c8d633a09f49cfa2ba65a99d")
                 .clientSecret("053e24571d26b62ce4927353d84f3cc465fe6ba6af1e45759f0d782e0a186d12")
                 .redirectUri("http://localhost:8080/oauth/callback")
-        .build()
-        );
+        .build());
     }
 }
