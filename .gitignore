@@ -151,3 +151,7 @@ spring-boot-auto-code-ui/.mvn/
 spring-boot-auto-code-ui/mvnw.cmd
 spring-boot-auto-code-ui/mvnw
 spring-boot-auto-code-ui/.gitignore
+spring-boot-alipay-login/.mvn/
+spring-boot-alipay-login/mvnw.cmd
+spring-boot-alipay-login/mvnw
+spring-boot-alipay-login/.gitignore

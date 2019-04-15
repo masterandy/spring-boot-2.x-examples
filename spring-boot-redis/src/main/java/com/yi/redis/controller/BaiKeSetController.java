@@ -40,8 +40,8 @@ public class BaiKeSetController {
         list2.add("小说");
         Baike baike2 = new Baike(2, "全职法师", list2, 1000000, 5, "乱", "男", 1000, 0, new Date(), new Date());
 
-        redisTemplate.opsForSet().add("baike", baike1);
-        redisTemplate.opsForSet().add("baike", baike2);
+        Long b1 = redisTemplate.opsForSet().add("baike", baike1);
+        Long b2 = redisTemplate.opsForSet().add("baike", baike2);
 
         return MessageResult.ok();
     }
@@ -60,5 +60,16 @@ public class BaiKeSetController {
         List<Baike> list = jsonArray.toList(Baike.class);
 
         return MessageResult.ok(list);
+    }
+
+    /**
+     * 根据key删除文档
+     * @return
+     */
+    @RequestMapping("/delBaikeSet")
+    public MessageResult delBaikeSet() {
+        Boolean delete = redisTemplate.delete("baike");
+
+        return MessageResult.ok(delete);
     }
 }
