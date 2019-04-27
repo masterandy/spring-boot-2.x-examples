@@ -153,6 +153,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-oschina-login](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-oschina-login)：通过开源中国授权登录我们的应用
 
+* [spring-boot-current-limiting](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-current-limiting)：基于令牌桶算法和漏桶算法实现的纳秒级分布式无锁限流
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
