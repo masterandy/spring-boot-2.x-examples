@@ -1,6 +1,5 @@
 package com.yi.aop.annotation.log.aspect;
 
-import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
@@ -72,7 +71,7 @@ public class LogAspect {
     @After("logPointCut()")
     public void doAfter() throws Throwable {
         // 接口结束后换行，方便分割查看
-        logger.info("=========================================== End ===========================================" + StrUtil.LF);
+        logger.info("=========================================== End ===========================================");
     }
 
     /**

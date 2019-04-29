@@ -83,6 +83,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-aop-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-aop-log)：通过spring aop拦截我们web项目请求的日志，非常实用
 
+* [spring-boot-aop-annotation-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-aop-annotation-log)：通过spring 注解aop拦截我们web项目请求的日志
+
 * [spring-boot-log](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-log)：log彩色日志系统，可以打印漂亮的彩色日志
 
 * [spring-boot-security](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-security)：Spring Security是一个基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架
