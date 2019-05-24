@@ -14,6 +14,7 @@ import java.lang.annotation.*;
 public @interface WebLog {
     /**
      * 接口描述
+     *
      * @return
      */
     String description() default "";

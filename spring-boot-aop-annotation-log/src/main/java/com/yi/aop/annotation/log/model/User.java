@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * 用户信息
+ *
  * @author YI
  * @date 2018-8-29 19:50:08
  */
