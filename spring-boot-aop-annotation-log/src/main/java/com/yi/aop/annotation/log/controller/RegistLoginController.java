@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 登录注册
+ *
  * @author YI
  * @date 2018-7-19 15:58:19
  */
@@ -25,19 +26,20 @@ public class RegistLoginController {
     private static final String PASSWORD = "123456";
 
     @RequestMapping("/")
-    public String index(){
+    public String index() {
         return "login";
     }
 
     /**
      * 用户注册
+     *
      * @param user
      * @return
      */
     @RequestMapping(value = "/user/regist", method = RequestMethod.POST)
     @ResponseBody
-    public MessageResult regist(@RequestBody User user){
-        if (user == null || StrUtil.isBlank(user.getUsername()) || StrUtil.isBlank(user.getPassword())){
+    public MessageResult regist(@RequestBody User user) {
+        if (user == null || StrUtil.isBlank(user.getUsername()) || StrUtil.isBlank(user.getPassword())) {
             logger.info("error : 用户名或者密码不能为空");
             return MessageResult.errorMsg("用户名或者密码不能为空");
         }
@@ -47,6 +49,7 @@ public class RegistLoginController {
 
     /**
      * 用户登录
+     *
      * @param user
      * @return
      */
@@ -54,17 +57,17 @@ public class RegistLoginController {
     @ResponseBody
     @WebLog(description = "用户注册")
     public MessageResult login(@RequestBody User user) {
-        if (user == null || StrUtil.isBlank(user.getUsername()) || StrUtil.isBlank(user.getPassword())){
+        if (user == null || StrUtil.isBlank(user.getUsername()) || StrUtil.isBlank(user.getPassword())) {
             logger.info("error : 用户名或者密码不能为空");
             return MessageResult.errorMsg("用户名或者密码不能为空");
         }
 
-        if (!user.getUsername().equals(USERNAME)){
+        if (!user.getUsername().equals(USERNAME)) {
             logger.info("error : 用户或密码不正确");
             return MessageResult.errorMsg("用户或密码不正确");
         }
 
-        if (!user.getPassword().equals(PASSWORD)){
+        if (!user.getPassword().equals(PASSWORD)) {
             logger.info("error : 用户或密码不正确");
             return MessageResult.errorMsg("用户或密码不正确");
         }

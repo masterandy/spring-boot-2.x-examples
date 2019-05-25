@@ -66,6 +66,7 @@ public class LogAspect {
 
     /**
      * 在切点之后织入
+     *
      * @throws Throwable
      */
     @After("logPointCut()")
@@ -105,6 +106,7 @@ public class LogAspect {
         Class targetClass = Class.forName(targetName);
         Method[] methods = targetClass.getMethods();
         StringBuilder description = new StringBuilder();
+
         for (Method method : methods) {
             if (method.getName().equals(methodName)) {
                 Class[] clazzs = method.getParameterTypes();
