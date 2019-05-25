@@ -14,8 +14,9 @@
 // */
 //@Component
 //public class MyInterceptorHandler implements CurrentInterceptorHandler {
+//
 //    @Override
-//    public void preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+//    public void preHandle(HttpServletRequest request, HttpServletResponse response) throws Exception {
 //        response.getWriter().print("当前系统不可用");
 //    }
 //}

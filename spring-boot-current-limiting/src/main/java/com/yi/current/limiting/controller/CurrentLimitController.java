@@ -1,6 +1,6 @@
 package com.yi.current.limiting.controller;
 
-import cn.yueshutong.springbootstartercurrentlimiting.annotation.CurrentLimiter;
+import cn.yueshutong.springbootstartercurrentlimiting.method.annotation.CurrentLimiter;
 import com.yi.current.limiting.utils.MessageResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

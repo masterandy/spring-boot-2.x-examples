@@ -1,7 +1,7 @@
 package com.yi.current.limiting.config;
 
-import cn.yueshutong.springbootstartercurrentlimiting.annotation.CurrentLimiter;
 import cn.yueshutong.springbootstartercurrentlimiting.handler.CurrentAspectHandler;
+import cn.yueshutong.springbootstartercurrentlimiting.method.annotation.CurrentLimiter;
 import com.yi.current.limiting.utils.MessageResult;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.stereotype.Component;
