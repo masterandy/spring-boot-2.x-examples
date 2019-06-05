@@ -168,3 +168,7 @@ spring-boot-sharding-sphere/mvnw
 spring-boot-sharding-sphere/.gitignore
 spring-boot-sharding-sphere/mvnw.cmd
 spring-boot-sharding-sphere/.mvn/
+spring-boot-session-redis/mvnw.cmd
+spring-boot-session-redis/mvnw
+spring-boot-session-redis/.gitignore
+spring-boot-session-redis/.mvn/
