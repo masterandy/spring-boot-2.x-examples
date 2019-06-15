@@ -4,9 +4,10 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.yi.base.HelloService;
 
 /**
- * 生产者提供服务
+ * 服务降级
+ *
  * @author YI
- * @date 2018-8-20 17:04:57
+ * @date 2019-6-11
  */
 @Service(
         version = "${hello.service.version}",
@@ -17,11 +18,12 @@ import com.yi.base.HelloService;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String sayHello(String name) {
-        return "Hello "+name+" !";
+        return "sayHello " + name;
     }
 
     @Override
     public String sayGoodbye(String name) {
-        return "Goodbye "+name+" !";
+        int i = 1 / 0;
+        return "sayGoodbye " + name;
     }
 }
