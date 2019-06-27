@@ -1,9 +1,10 @@
 package com.yi.mybatis.plus;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yi.mybatis.plus.dao.BaikeMapper;
 import com.yi.mybatis.plus.model.Baike;
 import com.yi.mybatis.plus.service.IBaiKeService;
 import org.junit.Test;
@@ -33,6 +34,8 @@ public class SpringBootMybatisPlusApplicationTests {
 
         List<Baike> baikeList = baiKeService.selectListByWrapper(new QueryWrapper<Baike>().eq("name", "乱"));
         System.out.println(baikeList);
+
+//        LambdaQueryWrapper<Class<Baike>> lambdaQuery = Wrappers.lambdaQuery(Baike.class);
     }
 
 }

@@ -1,5 +1,8 @@
 package com.yi.mybatis.plus.model;
 
+import lombok.Builder;
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.Date;
 
@@ -8,6 +11,8 @@ import java.util.Date;
  * @author YI
  * @date 2018-8-22 18:28:19
  */
+@Data
+@Builder
 public class Baike implements Serializable {
     /**
      * ID
@@ -90,96 +95,6 @@ public class Baike implements Serializable {
         this.name = name;
         this.gender = gender;
         this.goldcoin = goldcoin;
-    }
-
-    private static final long serialVersionUID = 1L;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getBook() {
-        return book;
-    }
-
-    public void setBook(String book) {
-        this.book = book;
-    }
-
-    public String getTag() {
-        return tag;
-    }
-
-    public void setTag(String tag) {
-        this.tag = tag;
-    }
-
-    public Integer getGood() {
-        return good;
-    }
-
-    public void setGood(Integer good) {
-        this.good = good;
-    }
-
-    public Integer getBad() {
-        return bad;
-    }
-
-    public void setBad(Integer bad) {
-        this.bad = bad;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-    public Integer getGoldcoin() {
-        return goldcoin;
-    }
-
-    public void setGoldcoin(Integer goldcoin) {
-        this.goldcoin = goldcoin;
-    }
-
-    public Byte getStatus() {
-        return status;
-    }
-
-    public void setStatus(Byte status) {
-        this.status = status;
-    }
-
-    public Date getCratedate() {
-        return cratedate;
-    }
-
-    public void setCratedate(Date cratedate) {
-        this.cratedate = cratedate;
-    }
-
-    public Date getUpdatedate() {
-        return updatedate;
-    }
-
-    public void setUpdatedate(Date updatedate) {
-        this.updatedate = updatedate;
     }
 
     @Override
