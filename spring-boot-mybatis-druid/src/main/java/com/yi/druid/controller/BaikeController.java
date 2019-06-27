@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,14 +26,24 @@ public class BaikeController {
 
     @RequestMapping(value = "/selectByExample", method = RequestMethod.POST)
     public MessageResult selectByExample(){
+        List<Baike> allBooks = new ArrayList<>();
         BaikeExample example = new BaikeExample();
         BaikeExample.Criteria criteria = example.createCriteria();
 
         criteria.andNameEqualTo("海明威");
+        List<Baike> hBaikes = baikeService.selectByExample(example);
 
-        List<Baike> baikes = baikeService.selectByExample(example);
+        criteria.andNameEqualTo("辰东");
+        List<Baike> cBaikes = baikeService.selectByExample(example);
 
-        return MessageResult.ok(baikes);
+        criteria.andNameEqualTo("乱");
+        List<Baike> lBaikes = baikeService.selectByExample(example);
+
+        allBooks.addAll(hBaikes);
+        allBooks.addAll(cBaikes);
+        allBooks.addAll(lBaikes);
+
+        return MessageResult.ok(allBooks);
     }
 
 
