@@ -1,5 +1,6 @@
 package com.yi.druid.config;
 
+import com.github.hwywl.antnest.annotation.init.GetProperties;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
  * @date 2018-8-22 18:19:45
  */
 @Configuration
-@MapperScan(basePackages = {"com.yi.druid.dao"})
+@GetProperties(properties = "aaaa/a.properties")
 public class Config {
 
 }

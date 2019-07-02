@@ -16,8 +16,12 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaProducer {
 
+    private final KafkaTemplate<String, String> kafkaTemplate;
+
     @Autowired
-    private KafkaTemplate<String, String> kafkaTemplate;
+    public KafkaProducer(KafkaTemplate<String, String> kafkaTemplate) {
+        this.kafkaTemplate = kafkaTemplate;
+    }
 
     public void sendMessage(String topicName, String jsonData) {
         log.info("向kafka推送数据:[{}]", jsonData);
@@ -43,7 +47,14 @@ public class KafkaProducer {
             @Override
             public boolean isInterestedInSuccess() {
                 log.info("数据发送完毕");
-                return false;
+
+                /**
+                 * Deprecated. the result of this method will be ignored.
+                 * Return true if this listener is interested in success as well as failure.
+                 * Returns:
+                 * true to express interest in successful sends.
+                 */
+                return true;
             }
         });
     }

@@ -1,5 +1,7 @@
 package com.yi.druid;
 
+import cn.hutool.crypto.SecureUtil;
+import cn.hutool.crypto.symmetric.DES;
 import cn.hutool.json.JSONUtil;
 import com.yi.druid.model.Baike;
 import com.yi.druid.model.BaikeExample;
@@ -100,6 +102,19 @@ public class SpringBootMybatisDruidApplicationTests {
         int i = baikeService.deleteByExample(example);
 
         System.out.println("更新 " + i + " 条数据");
+    }
+
+    /**
+     * 更新数据
+     */
+    @Test
+    public void test6() {
+        String EncryptStr = "151692df43cd2ca5ed8cb464a6898aa10118b165ee2b87aacd2218d48db38b9373c964cf4ca0c06cea704761627a141f814b7b359509790e32b3de81970e629d1fb41a7646611de9b407316d8d9938ec39a5f7209f65e54269525d7c2841e2ff84a082f2b6dfae28480d5cfc81959d2fd979b969d936670f3cae2f63be2198b862b44b2fccc381dc644db397bbb21afbca3e2bcda4c101d92dc58fe7be5fa65d9b0edb2291dcb0dc79bf7384a7c4b5229f52b5a3b7cfbe8e15d24939c0dc2cbf8be01b935ae56bbfbe87825b0ca91fc2d5067204fb0f9684095deb066be0892555f5554d2b71268d55091f1a6654bc52bdfa178672080ca0719bbb2f2cfefc37e3bf3a428ee5b69f3f62039da6b5a09e19f19ad560c8c96c5de4e8037448cfdd";
+
+        DES des = SecureUtil.des("1234567812345678".getBytes());
+        String decryptStr = des.decryptStr(EncryptStr);
+
+        System.out.println(decryptStr);
     }
 
 }

@@ -58,7 +58,7 @@
         <dependency>
             <groupId>com.github.hwywl</groupId>
             <artifactId>ant-nest</artifactId>
-            <version>1.0.9-RELEASE</version>
+            <version>1.0.11-RELEASE</version>
         </dependency>
 
         <dependency>

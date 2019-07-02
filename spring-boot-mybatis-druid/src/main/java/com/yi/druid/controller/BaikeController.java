@@ -1,16 +1,23 @@
 package com.yi.druid.controller;
 
+import cn.hutool.setting.dialect.Props;
+import com.github.hwywl.antnest.annotation.decrypt.DESDecryptBody;
+import com.github.hwywl.antnest.annotation.encrypt.DESEncryptBody;
+import com.github.hwywl.antnest.annotation.init.GetProperties;
+import com.github.hwywl.antnest.listener.GetPropertiesListener;
 import com.yi.druid.model.Baike;
 import com.yi.druid.model.BaikeExample;
 import com.yi.druid.service.BaikeService;
 import com.yi.druid.utils.MessageResult;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 百科接口
@@ -22,7 +29,6 @@ import java.util.List;
 public class BaikeController {
     @Autowired
     BaikeService baikeService;
-
 
     @RequestMapping(value = "/selectByExample", method = RequestMethod.POST)
     public MessageResult selectByExample(){
@@ -47,13 +53,27 @@ public class BaikeController {
     }
 
 
-    @RequestMapping(value = "/selectById", method = RequestMethod.POST)
-    public MessageResult selectById(){
+    @DESEncryptBody
+    @RequestMapping(value = "/selectByIdEncrypt", method = RequestMethod.POST)
+    @GetProperties(properties = {"d.properties", "c.properties"})
+    public MessageResult selectByIdEncrypt(){
 
 
         Baike baike = baikeService.selectByPrimaryKey(1L);
 
+        Map cachemap = GetPropertiesListener.CACHEMAP;
+        System.out.println(cachemap.get("d.spring.datasource.username"));
+
         return MessageResult.ok(baike);
+    }
+
+    @DESDecryptBody
+    @RequestMapping(value = "/selectByIdDecrypt", method = RequestMethod.GET)
+    public MessageResult selectByIdDecrypt(@RequestBody String content){
+
+        System.out.println(content);
+
+        return MessageResult.ok(content);
     }
 
 
