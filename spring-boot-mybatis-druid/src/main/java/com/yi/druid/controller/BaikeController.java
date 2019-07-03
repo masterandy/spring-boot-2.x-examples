@@ -1,9 +1,10 @@
 package com.yi.druid.controller;
 
-import cn.hutool.setting.dialect.Props;
 import com.github.hwywl.antnest.annotation.decrypt.DESDecryptBody;
 import com.github.hwywl.antnest.annotation.encrypt.DESEncryptBody;
 import com.github.hwywl.antnest.annotation.init.GetProperties;
+import com.github.hwywl.antnest.annotation.locak.LockKeyParam;
+import com.github.hwywl.antnest.annotation.locak.ZooLock;
 import com.github.hwywl.antnest.listener.GetPropertiesListener;
 import com.yi.druid.model.Baike;
 import com.yi.druid.model.BaikeExample;
@@ -30,26 +31,59 @@ public class BaikeController {
     @Autowired
     BaikeService baikeService;
 
+    /**
+     * 通过设置分布式锁，使得方法具有分布式锁的能力
+     * <p>分布式锁key：/DISTRIBUTED_LOCK_books</p>
+     * @return
+     * @throws InterruptedException
+     */
+    @ZooLock(key = "books")
     @RequestMapping(value = "/selectByExample", method = RequestMethod.POST)
-    public MessageResult selectByExample(){
-        List<Baike> allBooks = new ArrayList<>();
+    public MessageResult selectByExample() throws InterruptedException {
         BaikeExample example = new BaikeExample();
         BaikeExample.Criteria criteria = example.createCriteria();
 
         criteria.andNameEqualTo("海明威");
         List<Baike> hBaikes = baikeService.selectByExample(example);
+        List<Baike> allBooks = new ArrayList<>(hBaikes);
 
-        criteria.andNameEqualTo("辰东");
-        List<Baike> cBaikes = baikeService.selectByExample(example);
-
-        criteria.andNameEqualTo("乱");
-        List<Baike> lBaikes = baikeService.selectByExample(example);
-
-        allBooks.addAll(hBaikes);
-        allBooks.addAll(cBaikes);
-        allBooks.addAll(lBaikes);
+        Thread.sleep(6000);
 
         return MessageResult.ok(allBooks);
+    }
+
+    /**
+     * 通过@LockKeyParam 实现分布式锁动态key，如果对象中的id和book分别为 1 和 全职法师
+     * <p>分布式锁key：/DISTRIBUTED_LOCK_books/1/全职法师</p>
+     * @param baike 前端传入对象参数
+     * @return
+     * @throws InterruptedException
+     */
+    @ZooLock(key = "books", timeout = 3000L)
+    @RequestMapping(value = "/getBaikes", method = RequestMethod.POST)
+    public MessageResult getBaikes(@LockKeyParam(fields = {"id","book"}) Baike baike) throws InterruptedException {
+        System.out.println("我进来啦！！！");
+        Thread.sleep(5000);
+        System.out.println("我出来啦！！！");
+
+        return MessageResult.ok(baike);
+    }
+
+    /**
+     * 通过@LockKeyParam 实现分布式锁动态key，如果参数name为 全职法师
+     * <p>分布式锁key：/DISTRIBUTED_LOCK_books/全职法师</p>
+     * @param name 前端书名参数
+     * @return
+     * @throws InterruptedException
+     */
+    @ZooLock(key = "books", timeout = 3000L)
+    @RequestMapping(value = "/getBaikeName", method = RequestMethod.POST)
+    public MessageResult getBaikes(@LockKeyParam String name) throws InterruptedException {
+        System.out.println("我进来啦！！！");
+        Thread.sleep(5000);
+        System.out.println("我出来啦！！！");
+
+        return MessageResult.ok(name);
     }
 
 

@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @GetProperties(properties = "aaaa/a.properties")
+@MapperScan(basePackages = {"com.yi.druid.dao"})
 public class Config {
 
 }
