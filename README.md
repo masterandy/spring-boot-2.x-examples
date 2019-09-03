@@ -161,6 +161,9 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-session-redis](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-session-redis)：使用spring session实现分布式应用的session共享
 
+* [spring-boot-storm](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-storm)：使用Storm进行订单的实时计算
+
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 

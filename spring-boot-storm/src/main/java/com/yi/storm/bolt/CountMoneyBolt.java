@@ -24,6 +24,12 @@ import java.util.Map;
 public class CountMoneyBolt extends BaseBasicBolt {
     private StringRedisTemplate stringRedisTemplate;
 
+    /**
+     * 初始化方法，程序启动只会调用一次
+     *
+     * @param stormConf worker的Storm配置
+     * @param context   上下文
+     */
     @Override
     public void prepare(Map stormConf, TopologyContext context) {
         this.stringRedisTemplate = RedisConfig.stringRedisTemplate;
