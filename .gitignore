@@ -177,3 +177,7 @@ spring-boot-parquet/.mvn/wrapper/maven-wrapper.jar
 spring-boot-parquet/.mvn/wrapper/MavenWrapperDownloader.java
 spring-boot-parquet/.gitignore
 spring-boot-storm/.mvn/
+spring-boot-strategy/.gitignore
+spring-boot-strategy/mvnw
+spring-boot-strategy/mvnw.cmd
+spring-boot-strategy/.mvn/
