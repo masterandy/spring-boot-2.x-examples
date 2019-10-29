@@ -181,3 +181,11 @@ spring-boot-strategy/.gitignore
 spring-boot-strategy/mvnw
 spring-boot-strategy/mvnw.cmd
 spring-boot-strategy/.mvn/
+spring-boot-hbase/.gitignore
+spring-boot-hbase/mvnw
+spring-boot-hbase/mvnw.cmd
+spring-boot-hbase/.mvn/
+spring-boot-smart-socket/.gitignore
+spring-boot-smart-socket/mvnw
+spring-boot-smart-socket/mvnw.cmd
+spring-boot-smart-socket/.mvn/
