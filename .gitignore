@@ -189,3 +189,7 @@ spring-boot-smart-socket/.gitignore
 spring-boot-smart-socket/mvnw
 spring-boot-smart-socket/mvnw.cmd
 spring-boot-smart-socket/.mvn/
+spring-boot-psql/.mvn/
+spring-boot-psql/.gitignore
+spring-boot-psql/mvnw
+spring-boot-psql/mvnw.cmd

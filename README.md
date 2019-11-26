@@ -165,6 +165,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-hbase](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-hbase)：HBase的CRUD
 
+* [spring-boot-psql](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-psql)：PostgreSQL数据库操作
+
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
