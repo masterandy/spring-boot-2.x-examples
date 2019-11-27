@@ -193,3 +193,7 @@ spring-boot-psql/.mvn/
 spring-boot-psql/.gitignore
 spring-boot-psql/mvnw
 spring-boot-psql/mvnw.cmd
+spring-boot-presto/.gitignore
+spring-boot-presto/mvnw
+spring-boot-presto/mvnw.cmd
+spring-boot-presto/.mvn/
