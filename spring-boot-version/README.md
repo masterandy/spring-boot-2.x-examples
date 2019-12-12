@@ -144,6 +144,8 @@ public class TestController {
 
 我们可以看到设计达到了预期，v1版本只能走test01，v2版本走test02，版本数大于2的走最大版本数接口，既test02。
 
+文章思路来自于：肥朝公众号
+
 ### 问题建议
 
 - 联系我的邮箱：ilovey_hwy@163.com
