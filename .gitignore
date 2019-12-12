@@ -197,3 +197,7 @@ spring-boot-presto/.gitignore
 spring-boot-presto/mvnw
 spring-boot-presto/mvnw.cmd
 spring-boot-presto/.mvn/
+spring-boot-version/.mvn/
+spring-boot-version/.gitignore
+spring-boot-version/mvnw
+spring-boot-version/mvnw.cmd
