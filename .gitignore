@@ -201,3 +201,7 @@ spring-boot-version/.mvn/
 spring-boot-version/.gitignore
 spring-boot-version/mvnw
 spring-boot-version/mvnw.cmd
+spring-boot-redshift/.gitignore
+spring-boot-redshift/mvnw
+spring-boot-redshift/mvnw.cmd
+spring-boot-redshift/.mvn/
