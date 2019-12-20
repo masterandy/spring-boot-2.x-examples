@@ -171,7 +171,7 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-version](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-version)：web服务版本接口控制
 
-
+* [spring-boot-redshift](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-redshift)：Amazon Redshift 是一种快速、完全托管的 PB 级数据仓库服务
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
