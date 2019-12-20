@@ -56,7 +56,7 @@ public class Config {
 
 具体可参考代码实现，这里就不累述了，测试代码在：
 ```
-com.yi.redshift.controller.GameLogRealtimeController
+com.yi.redshift.SpringBootRedshiftApplicationTests
 ```
 
 当然在使用之前建议看看这个文档：[Amazon Redshift 最佳实践](https://docs.aws.amazon.com/zh_cn/redshift/latest/dg/best-practices.html)
