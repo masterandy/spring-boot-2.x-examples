@@ -28,7 +28,7 @@ public class Baike implements Serializable {
     /**
      * 标签
      */
-    private String tag;
+    private String label;
 
     /**
      * 点赞
@@ -74,10 +74,10 @@ public class Baike implements Serializable {
     }
 
 
-    public Baike(Integer id, String book, String tag, Integer good, Integer bad, String name, String gender, Integer goldCoin) {
+    public Baike(Integer id, String book, String label, Integer good, Integer bad, String name, String gender, Integer goldCoin) {
         this.id = id;
         this.book = book;
-        this.tag = tag;
+        this.label = label;
         this.good = good;
         this.bad = bad;
         this.name = name;
@@ -85,10 +85,10 @@ public class Baike implements Serializable {
         this.goldCoin = goldCoin;
     }
 
-    public Baike(Integer id, String book, String tag, Integer good, Integer bad, String name, String gender, Integer goldCoin, Integer status, Date crateDate, Date updateDate) {
+    public Baike(Integer id, String book, String label, Integer good, Integer bad, String name, String gender, Integer goldCoin, Integer status, Date crateDate, Date updateDate) {
         this.id = id;
         this.book = book;
-        this.tag = tag;
+        this.label = label;
         this.good = good;
         this.bad = bad;
         this.name = name;

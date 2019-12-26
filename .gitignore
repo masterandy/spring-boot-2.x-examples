@@ -205,3 +205,7 @@ spring-boot-redshift/.gitignore
 spring-boot-redshift/mvnw
 spring-boot-redshift/mvnw.cmd
 spring-boot-redshift/.mvn/
+spring-boot-lianjia/.mvn/
+spring-boot-lianjia/.gitignore
+spring-boot-lianjia/mvnw
+spring-boot-lianjia/mvnw.cmd
