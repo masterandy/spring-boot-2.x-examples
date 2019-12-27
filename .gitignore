@@ -209,3 +209,7 @@ spring-boot-lianjia/.mvn/
 spring-boot-lianjia/.gitignore
 spring-boot-lianjia/mvnw
 spring-boot-lianjia/mvnw.cmd
+spring-boot-douban/.gitignore
+spring-boot-douban/mvnw
+spring-boot-douban/mvnw.cmd
+spring-boot-douban/.mvn/

@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.yi</groupId>
-    <artifactId>spring-boot-lianjia</artifactId>
+    <artifactId>spring-boot-douban</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-boot-lianjia</name>
+    <name>spring-boot-douban</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
