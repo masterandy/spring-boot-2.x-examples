@@ -213,3 +213,7 @@ spring-boot-douban/.gitignore
 spring-boot-douban/mvnw
 spring-boot-douban/mvnw.cmd
 spring-boot-douban/.mvn/
+spring-boot-nacos-config/.gitignore
+spring-boot-nacos-config/mvnw
+spring-boot-nacos-config/mvnw.cmd
+spring-boot-nacos-config/.mvn/
