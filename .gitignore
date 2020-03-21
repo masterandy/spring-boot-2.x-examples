@@ -217,3 +217,7 @@ spring-boot-nacos-config/.gitignore
 spring-boot-nacos-config/mvnw
 spring-boot-nacos-config/mvnw.cmd
 spring-boot-nacos-config/.mvn/
+spring-boot-consul/.gitignore
+spring-boot-consul/mvnw
+spring-boot-consul/mvnw.cmd
+spring-boot-consul/.mvn/
