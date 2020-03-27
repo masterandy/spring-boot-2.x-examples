@@ -221,3 +221,7 @@ spring-boot-consul/.gitignore
 spring-boot-consul/mvnw
 spring-boot-consul/mvnw.cmd
 spring-boot-consul/.mvn/
+spring-boot-apollo/.gitignore
+spring-boot-apollo/mvnw
+spring-boot-apollo/mvnw.cmd
+spring-boot-apollo/.mvn/
