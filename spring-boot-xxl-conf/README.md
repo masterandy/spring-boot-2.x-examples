@@ -185,52 +185,6 @@ public class IndexController {
 
 ``` 
 {
-  "code": 200,
-  "msg": null,     
-  "data": {         
-    "key01": "22",
-    "key02": "111"
-  }
-}
-```
-
- **返回参数说明** 
-
-|参数名|类型|说明|
-|:-----  |:-----|-----                           |
-|code |int   |200 表示正常、其他失败  |
-|msg |string   |错误提示消息  |
-|data |array   |配置信息，KV格式  |
-
-**请求URL：** 
-- ` http://localhost:8099/xxl-conf-admin/find `
-  
-**请求方式：**
-- POST 
-
-**参数：** 
-
-|参数名|必选|类型|说明|
-|:----    |:---|:----- |-----   |
-|accessToken |是  |string |请求令牌   |
-|env |是  |string | 环境标识    |
-|keys     |是  |string | 配置Key列表    |
-
- **请求示例**
-```
-{
-    "accessToken" : "xx",
-    "env" : "xx",
-    "keys" : [
-        "key01",
-        "key02"
-    ]
-}
-```
- **返回示例**
-
-``` 
-{
   "code": 200, 
   "msg": "Monitor key update."
 }
