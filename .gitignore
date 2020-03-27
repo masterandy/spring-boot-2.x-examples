@@ -225,3 +225,7 @@ spring-boot-apollo/.gitignore
 spring-boot-apollo/mvnw
 spring-boot-apollo/mvnw.cmd
 spring-boot-apollo/.mvn/
+spring-boot-xxl-conf/.gitignore
+spring-boot-xxl-conf/mvnw
+spring-boot-xxl-conf/mvnw.cmd
+spring-boot-xxl-conf/.mvn/

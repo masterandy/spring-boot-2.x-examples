@@ -181,6 +181,7 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-consul](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-consul)：consul构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
+* [spring-boot-xxl-conf](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-xxl-conf)：一个轻量级分布式配置管理平台（推荐）。
 
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
