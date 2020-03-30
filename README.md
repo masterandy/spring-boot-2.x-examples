@@ -177,6 +177,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-douban](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-douban)：豆瓣哪吒之魔童降世影评
 
+* [spring-boot-figure](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-figure)：来呀斗图呀
+
 * [spring-boot-nacos-config](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-nacos-config)：nacos构建云原生应用的动态服务发现、配置管理和服务管理平台。
 
 * [spring-boot-consul](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-consul)：consul构建云原生应用的动态服务发现、配置管理和服务管理平台。
