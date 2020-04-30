@@ -233,3 +233,7 @@ spring-boot-figure/.gitignore
 spring-boot-figure/mvnw
 spring-boot-figure/mvnw.cmd
 spring-boot-figure/.mvn/
+spring-boot-monitor/.gitignore
+spring-boot-monitor/mvnw
+spring-boot-monitor/mvnw.cmd
+spring-boot-monitor/.mvn/
