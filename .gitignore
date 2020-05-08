@@ -237,3 +237,6 @@ spring-boot-monitor/.gitignore
 spring-boot-monitor/mvnw
 spring-boot-monitor/mvnw.cmd
 spring-boot-monitor/.mvn/
+spring-boot-jib/.gitignore
+spring-boot-jib/mvnw
+spring-boot-jib/mvnw.cmd
