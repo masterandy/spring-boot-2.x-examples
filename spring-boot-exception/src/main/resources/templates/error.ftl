@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
-    <meta charset="UTF-8" />
-    <title>统一异常处理</title>
+    <meta charset="UTF-8"/>
+    <title>统一页面异常处理</title>
 </head>
 <body>
-<h1>Error Handler</h1>
-<div th:text="${url}"></div>
-<div th:text="${exception.message}"></div>
+
+<h1>统一页面异常处理</h1>
+<p>
+    <span style="font-size: large; font-family: arial,serif; color: darkseagreen; "> ${url} </span>
+</p>
+<p>
+    <span style="font-size: x-large; font-family: arial,serif; color: red; "> ${message} </span>
+</p>
+
 </body>
 </html>

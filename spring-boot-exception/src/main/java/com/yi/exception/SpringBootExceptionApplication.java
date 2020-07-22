@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * 统一异常处理
+ *
  * @author YI
  * @date 2018-8-21 10:44:03
  */
