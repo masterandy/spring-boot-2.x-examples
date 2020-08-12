@@ -241,3 +241,6 @@ spring-boot-jib/.gitignore
 spring-boot-jib/mvnw
 spring-boot-jib/mvnw.cmd
 *.iml
+spring-boot-docker-minio/mvnw
+spring-boot-docker-minio/mvnw.cmd
+spring-boot-docker-minio/.mvn/
