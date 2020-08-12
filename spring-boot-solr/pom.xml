@@ -23,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <hutool-all.version>4.1.18</hutool-all.version>
-        <commons-beanutils.version>1.9.3</commons-beanutils.version>
+        <commons-beanutils.version>1.9.4</commons-beanutils.version>
     </properties>
 
     <dependencies>
