@@ -144,6 +144,12 @@ public class MiniOController {
 }
 ```
 
+![](https://hwy-figure-bed.oss-cn-hangzhou.aliyuncs.com/image/20200812144455.png)
+
+我们去看minio服务页面，可以发现文件已经被上传了。
+
+![](https://hwy-figure-bed.oss-cn-hangzhou.aliyuncs.com/image/20200812144501.png)
+
 api操作非常简单，具体源码：https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-docker-minio
 
 ### 问题建议
