@@ -189,6 +189,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-docker-minio](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-docker-minio)：MinIO 是一个基于Apache License v2.0开源协议的对象存储服务。
 
+* [spring-boot-mqtt](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mqtt)：基于ActiveMQ的MQTT协议服务。
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 

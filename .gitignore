@@ -244,3 +244,7 @@ spring-boot-jib/mvnw.cmd
 spring-boot-docker-minio/mvnw
 spring-boot-docker-minio/mvnw.cmd
 spring-boot-docker-minio/.mvn/
+spring-boot-mqtt/.mvn/
+spring-boot-mqtt/.gitignore
+spring-boot-mqtt/mvnw
+spring-boot-mqtt/mvnw.cmd
