@@ -13,7 +13,10 @@ import org.springframework.stereotype.Component;
 @Component
 @ConfigurationProperties(prefix = "mqtt")
 public class IMqttProperties {
-    public static final String QUEUE = "sample.mqttChannel";
+    /**
+     * mqttChannel方法名称
+     */
+    public static final String QUEUE = "mqttChannel";
 
     /**
      * 集群地址
