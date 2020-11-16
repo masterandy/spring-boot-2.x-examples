@@ -248,3 +248,7 @@ spring-boot-mqtt/.mvn/
 spring-boot-mqtt/.gitignore
 spring-boot-mqtt/mvnw
 spring-boot-mqtt/mvnw.cmd
+spring-boot-ali-loghub/.gitignore
+spring-boot-ali-loghub/mvnw
+spring-boot-ali-loghub/mvnw.cmd
+spring-boot-ali-loghub/.mvn/

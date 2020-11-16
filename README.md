@@ -191,6 +191,8 @@ Spring Boot 2.x code examples 编写2.x版本以后的各种示例代码
 
 * [spring-boot-mqtt](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-mqtt)：基于ActiveMQ的MQTT协议服务。
 
+* [spring-boot-ali-loghub](https://github.com/HWYWL/spring-boot-2.x-examples/tree/master/spring-boot-ali-loghub)：阿里云日志loghub sdk封装操作。
+
 ### 感谢
 - 例程还有不足之处，请大家Issues ヾ(๑╹◡╹)ﾉ"
 - 我那么可爱你不点个star吗 φ(>ω<*) 
